@@ -55,7 +55,7 @@
 }
 
 /* DISEÑO PARA CELULARES */
-@media (width <= 1440px) {
+@media (width <= 1470px) {
   .Main__About__Presentation,
   .Main__About__Business,
   .Main__About__Talent,

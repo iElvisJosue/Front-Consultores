@@ -11,6 +11,7 @@
   background-position: right;
 }
 .Main__WhyConsultant__Help--Content {
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -22,6 +23,12 @@
 }
 .Main__WhyConsultant__Help--Title--Text {
   font-size: 2.5rem;
+}
+@media (width <= 970px) {
+  .Main__WhyConsultant__Help--Picture--Left,
+  .Main__WhyConsultant__Help--Picture--Right {
+    min-width: 200px;
+  }
 }
 @media (width <= 768px) {
   .Main__WhyConsultant__Help--Picture--Left,

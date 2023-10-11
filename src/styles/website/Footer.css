@@ -27,7 +27,7 @@
 .Main__Footer--Link a:hover ion-icon {
   transform: translateY(-5px);
 }
-@media (width <= 1440px) {
+@media (width <= 1470px) {
   .Main__Footer {
     width: 100%;
     padding: 40px 20px;

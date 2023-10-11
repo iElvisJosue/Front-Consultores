@@ -17,11 +17,11 @@ export default function Header() {
     },
     {
       title: "¿Quieres ser un consultor?",
-      link: "#",
+      link: "/QuieresSerUnConsultor",
     },
     {
       title: "¿Tienes un proyecto?",
-      link: "#",
+      link: "/TienesUnProyecto",
     },
     {
       title: "¿Quienes somos?",
@@ -70,6 +70,8 @@ export default function Header() {
       <div className={classMenu}>
         <button onClick={() => setShowMenu(!showMenu)}>Cerrar</button>
         <a href="/ParaQueUnConsultor">¿Para qué un consultor?</a>
+        <a href="/QuieresSerUnConsultor">¿Quieres ser un consultor?</a>
+        <a href="/TienesUnProyecto">¿Tienes Un Proyecto?</a>
         <a href="/QuienesSomos">¿Quienes somos?</a>
         <a href="/MisionVision">Misión y Visión</a>
         <a href="/IniciarSesion">Iniciar sesión</a>

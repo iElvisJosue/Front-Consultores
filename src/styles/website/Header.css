@@ -97,7 +97,7 @@
 .Main__Header--Navbar.Show {
   right: 0;
 }
-@media (width <= 1440px) {
+@media (width <= 1470px) {
   .Main__Header--Menu--Item--Link {
     font-size: 1.4rem;
   }
