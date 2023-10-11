@@ -26,8 +26,8 @@
   position: relative;
   width: 100%;
   list-style: none;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
 
   display: flex;
   justify-content: flex-end;
@@ -80,13 +80,29 @@
 
   transition: 0.5s ease-in-out all;
 }
-.Main__Header--Navbar a {
-  font-size: 2.5rem;
-  color: var(--White);
+.Main__Header--Navbar button {
+  padding: 10px 20px;
+  background-color: var(--White);
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
+.Main__Header--Navbar a {
+  color: var(--White);
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
 .Main__Header--Navbar.Show {
   right: 0;
 }
+@media (width <= 1440px) {
+  .Main__Header--Menu--Item--Link {
+    font-size: 1.4rem;
+  }
+}
+
 @media (width <= 1233px) {
   .Main__Header--Menu {
     display: none;

@@ -1,7 +1,7 @@
 import "../../../styles/website/ParaQueUnConsultorMensaje.css";
 
 // eslint-disable-next-line react/prop-types
-export default function WhyConsultantMessage({ content }) {
+export default function ParaQueUnConsultorMensaje({ content }) {
   const contentWhyConsultantMessage = {
     1: {
       title: "Marca tu propio ritmo",

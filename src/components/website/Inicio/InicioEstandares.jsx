@@ -1,6 +1,6 @@
 import "../../../styles/website/InicioEstandares.css";
 
-export default function HomeStandards() {
+export default function InicioEstandares() {
   return (
     <div className="Main__Brown">
       <section className="Main__Standards">

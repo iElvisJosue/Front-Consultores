@@ -1,6 +1,6 @@
 import "../../../styles/website/InicioMensajeContacto.css";
 
-export default function HomeContactMessage() {
+export default function InicioMensajeContacto() {
   return (
     <div className="Main__White">
       <section className="Main__ContactMessage">

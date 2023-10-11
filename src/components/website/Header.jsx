@@ -10,6 +10,37 @@ export default function Header() {
     ? "Main__Header--Navbar Show"
     : "Main__Header--Navbar";
 
+  const menuOption = [
+    {
+      title: "¿Para qué un consultor?",
+      link: "/ParaQueUnConsultor",
+    },
+    {
+      title: "¿Quieres ser un consultor?",
+      link: "#",
+    },
+    {
+      title: "¿Tienes un proyecto?",
+      link: "#",
+    },
+    {
+      title: "¿Quienes somos?",
+      link: "/QuienesSomos",
+    },
+    {
+      title: "Pregúntanos",
+      link: "#",
+    },
+    {
+      title: "Misión y Visión",
+      link: "/MisionVision",
+    },
+    {
+      title: "Iniciar Sesión",
+      link: "/IniciarSesion",
+    },
+  ];
+
   return (
     <>
       <header className="Main__Header">
@@ -21,39 +52,13 @@ export default function Header() {
           />
         </a>
         <ul className="Main__Header--Menu">
-          <li className="Main__Header--Menu--Item">
-            <a
-              href="/ParaQueUnConsultor"
-              className="Main__Header--Menu--Item--Link"
-            >
-              ¿Para qué un consultor?
-            </a>
-          </li>
-          <li className="Main__Header--Menu--Item">
-            <a href="#" className="Main__Header--Menu--Item--Link">
-              ¿Quieres ser un consultor?
-            </a>
-          </li>
-          <li className="Main__Header--Menu--Item">
-            <a href="#" className="Main__Header--Menu--Item--Link">
-              ¿Tienes un proyecto?
-            </a>
-          </li>
-          <li className="Main__Header--Menu--Item">
-            <a href="/QuienesSomos" className="Main__Header--Menu--Item--Link">
-              ¿Quienes somos?
-            </a>
-          </li>
-          <li className="Main__Header--Menu--Item">
-            <a href="#" className="Main__Header--Menu--Item--Link">
-              Pregúntanos
-            </a>
-          </li>
-          <li className="Main__Header--Menu--Item">
-            <a href="/IniciarSesion" className="Main__Header--Menu--Item--Link">
-              Iniciar sesión
-            </a>
-          </li>
+          {menuOption.map(({ title, link }, index) => (
+            <li className="Main__Header--Menu--Item" key={index}>
+              <a href={link} className="Main__Header--Menu--Item--Link">
+                {title}
+              </a>
+            </li>
+          ))}
         </ul>
         <button
           className="Main__Header--Button"
@@ -64,8 +69,9 @@ export default function Header() {
       </header>
       <div className={classMenu}>
         <button onClick={() => setShowMenu(!showMenu)}>Cerrar</button>
-        <a href="/QuienesSomos">¿Quienes somos?</a>
         <a href="/ParaQueUnConsultor">¿Para qué un consultor?</a>
+        <a href="/QuienesSomos">¿Quienes somos?</a>
+        <a href="/MisionVision">Misión y Visión</a>
         <a href="/IniciarSesion">Iniciar sesión</a>
       </div>
     </>
