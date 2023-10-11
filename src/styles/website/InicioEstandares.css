@@ -1,0 +1,39 @@
+.Main__Standards--Picture {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.Main__Standards--Picture {
+  background-image: url("../../public/Estandares.jpg");
+}
+.Main__Standards--Details {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.Main__Standards--Details--Title {
+  text-align: center;
+  font-size: 6.5rem;
+  max-width: 80%;
+  margin: auto;
+}
+.Main__Standards--Details--Details {
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media (width <= 1024px) {
+  .Main__Standards--Details--Title {
+    max-width: 100%;
+  }
+}
+@media (width <= 768px) {
+  .Main__Standards {
+    flex-direction: column-reverse;
+  }
+  .Main__Standards--Picture {
+    height: 200px;
+  }
+}

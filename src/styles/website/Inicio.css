@@ -1,0 +1,45 @@
+/* ESTILOS PARA LAS SECCIONES */
+.Main__Presentation,
+.Main__Advantages,
+.Main__Services,
+.Main__Message {
+  width: 1440px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+.Main__Standards,
+.Main__ContactMessage {
+  width: 1440px;
+  margin: auto;
+
+  display: flex;
+}
+.Main__Advantages,
+.Main__Services,
+.Main__Message,
+.Main__Standards,
+.Main__ContactMessage {
+  gap: 20px;
+  padding: 40px 0px;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (width <= 1440px) {
+  .Main__Presentation,
+  .Main__Advantages,
+  .Main__Services,
+  .Main__Message,
+  .Main__Standards,
+  .Main__ContactMessage {
+    width: 100%;
+  }
+  .Main__Advantages,
+  .Main__Services,
+  .Main__Message,
+  .Main__Standards,
+  .Main__ContactMessage {
+    padding: 40px 20px;
+  }
+}

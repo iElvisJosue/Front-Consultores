@@ -1,0 +1,38 @@
+.Main__WhyConsultant__Help--Picture--Left,
+.Main__WhyConsultant__Help--Picture--Right {
+  min-width: 250px;
+  height: 600px;
+  background-image: url("../../public/WhyConsultantHelped.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.Main__WhyConsultant__Help--Picture--Right {
+  background-position: right;
+}
+.Main__WhyConsultant__Help--Content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.Main__WhyConsultant__Help--Title {
+  font-size: 6.5rem;
+}
+.Main__WhyConsultant__Help--Title--Text {
+  font-size: 2.5rem;
+}
+@media (width <= 768px) {
+  .Main__WhyConsultant__Help--Picture--Left,
+  .Main__WhyConsultant__Help--Picture--Right {
+    width: 100%;
+    height: 100px;
+  }
+  .Main__WhyConsultant__Help--Picture--Left {
+    background-position: top;
+  }
+  .Main__WhyConsultant__Help--Picture--Right {
+    background-position: bottom;
+  }
+}
