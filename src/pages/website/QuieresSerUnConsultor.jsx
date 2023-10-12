@@ -12,7 +12,7 @@ import "../../styles/website/QuieresSerUnConsultor.css";
 
 export default function TienesUnProyecto() {
   return (
-    <main className="Main">
+    <main className="Main__WantConsultant">
       <Header />
       <QuieresSerUnConsultorPresentacion />
       <QuieresSerUnConsultorMensaje content="One" backgroundColor={true} />

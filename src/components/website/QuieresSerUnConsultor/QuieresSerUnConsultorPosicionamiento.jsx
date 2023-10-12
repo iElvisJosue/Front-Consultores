@@ -13,12 +13,18 @@ export default function QuieresSerUnConsultorPosicionamiento() {
             visibilidad de tu marca y mejorando el posicionamiento de tu
             negocio.
           </p>
-          <a href="#" className="Main__WantConsultant__Position--Text--Button">
+          <a
+            href="/CodigoDelConsultor"
+            className="Main__WantConsultant__Position--Text--Button"
+          >
             <p className="Main__WantConsultant__Position--Text--Button--Text">
               Código del consultor
             </p>
           </a>
-          <a href="#" className="Main__WantConsultant__Position--Text--Button">
+          <a
+            href="/IniciarSesion"
+            className="Main__WantConsultant__Position--Text--Button"
+          >
             <p className="Main__WantConsultant__Position--Text--Button--Text">
               Quiero mostrarte mi proyecto
             </p>

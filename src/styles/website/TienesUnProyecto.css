@@ -1,4 +1,4 @@
-.Main__HaveProject,
+.Main__HaveProject__Presentation,
 .Main__HaveProject__Steps,
 .Main__HaveProject__Message,
 .Main__HaveProject__Performance {
@@ -21,7 +21,7 @@
 
 /* DISEÑO PARA CELULARES */
 @media (width <= 1470px) {
-  .Main__HaveProject,
+  .Main__HaveProject__Presentation,
   .Main__HaveProject__Steps,
   .Main__HaveProject__Message,
   .Main__HaveProject__Performance {

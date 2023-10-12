@@ -11,7 +11,7 @@ import "../../styles/website/TienesUnProyecto.css";
 
 export default function TienesUnProyecto() {
   return (
-    <main className="Main">
+    <main className="Main__HaveProject">
       <Header />
       <TienesUnProyectoPresentacion />
       <TienesUnProyectoMensaje content="One" backgroundColor={true} />

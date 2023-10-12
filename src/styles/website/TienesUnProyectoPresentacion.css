@@ -1,8 +1,8 @@
-.Main__HaveProject__Content {
+.Main__HaveProject__Presentation--Content {
   display: flex;
   margin-top: 75px;
 }
-.Main__HaveProject__Content--Text {
+.Main__HaveProject__Presentation--Content--Text {
   width: 100%;
   padding: 40px 0;
 
@@ -10,13 +10,13 @@
   flex-direction: column;
   gap: 30px;
 }
-.Main__HaveProject__Content--Text--Title {
+.Main__HaveProject__Presentation--Content--Text--Title {
   font-size: 6.5rem;
 }
-.Main__HaveProject__Content--Text--SubTitle {
+.Main__HaveProject__Presentation--Content--Text--SubTitle {
   font-size: 3.5rem;
 }
-.Main__HaveProject__Content--Text--Button {
+.Main__HaveProject__Presentation--Content--Text--Button {
   position: relative;
   border: 3px solid var(--Black);
   color: var(--Black);
@@ -29,11 +29,11 @@
   justify-content: center;
 }
 
-.Main__HaveProject__Content--Text--Button--Text {
+.Main__HaveProject__Presentation--Content--Text--Button--Text {
   z-index: 1;
   font-size: 2.5rem;
 }
-.Main__HaveProject__Content--Text--Button::after {
+.Main__HaveProject__Presentation--Content--Text--Button::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -45,13 +45,13 @@
 
   transition: 0.3s ease-in-out all;
 }
-.Main__HaveProject__Content--Text--Button:hover::after {
+.Main__HaveProject__Presentation--Content--Text--Button:hover::after {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
 }
-.Main__HaveProject__Content--Image {
+.Main__HaveProject__Presentation--Content--Image {
   width: 100%;
   background-image: url("../../public/TienesUnProyectoPresentacion.jpg");
   background-repeat: no-repeat;
@@ -60,29 +60,29 @@
 }
 /* DISEÑO PARA CELULARES */
 @media (width <= 1470px) {
-  .Main__HaveProject__Content--Text {
+  .Main__HaveProject__Presentation--Content--Text {
     padding: 40px 20px;
   }
 }
 
 @media (width <= 1024px) {
-  .Main__HaveProject__Content--Text--Button {
+  .Main__HaveProject__Presentation--Content--Text--Button {
     width: 100%;
   }
 }
 @media (width <= 768px) {
-  .Main__HaveProject__Content {
+  .Main__HaveProject__Presentation--Content {
     flex-direction: column-reverse;
   }
-  .Main__HaveProject__Content--Image {
+  .Main__HaveProject__Presentation--Content--Image {
     height: 400px;
   }
 }
 @media (width <= 500px) {
-  .Main__HaveProject__Content--Image {
+  .Main__HaveProject__Presentation--Content--Image {
     height: 300px;
   }
-  .Main__HaveProject__Content--Text--Button {
+  .Main__HaveProject__Presentation--Content--Text--Button {
     height: 50px;
   }
 }

@@ -9,12 +9,18 @@ export default function QuieresSerUnConsultorBeneficios() {
           <p className="Main__WantConsultant__Benefits--Title">
             Beneficios de unirte a nuestro ecosistema
           </p>
-          <a href="#" className="Main__WantConsultant__Benefits--Text--Button">
+          <a
+            href="/CodigoDelConsultor"
+            className="Main__WantConsultant__Benefits--Text--Button"
+          >
             <p className="Main__WantConsultant__Benefits--Text--Button--Text">
               Código del consultor
             </p>
           </a>
-          <a href="#" className="Main__WantConsultant__Benefits--Text--Button">
+          <a
+            href="/IniciarSesion"
+            className="Main__WantConsultant__Benefits--Text--Button"
+          >
             <p className="Main__WantConsultant__Benefits--Text--Button--Text">
               Quiero ser parte de sus expertos
             </p>

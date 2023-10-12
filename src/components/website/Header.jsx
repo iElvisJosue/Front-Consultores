@@ -29,7 +29,7 @@ export default function Header() {
     },
     {
       title: "Pregúntanos",
-      link: "#",
+      link: "/Preguntanos",
     },
     {
       title: "Misión y Visión",
@@ -73,6 +73,7 @@ export default function Header() {
         <a href="/QuieresSerUnConsultor">¿Quieres ser un consultor?</a>
         <a href="/TienesUnProyecto">¿Tienes Un Proyecto?</a>
         <a href="/QuienesSomos">¿Quienes somos?</a>
+        <a href="/Preguntanos">Pregúntanos</a>
         <a href="/MisionVision">Misión y Visión</a>
         <a href="/IniciarSesion">Iniciar sesión</a>
       </div>

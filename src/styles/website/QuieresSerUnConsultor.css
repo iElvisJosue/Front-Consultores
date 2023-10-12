@@ -1,4 +1,4 @@
-.Main__WantConsultant,
+.Main__WantConsultant__Presentation,
 .Main__WantConsultant__Message,
 .Main__WantConsultant__Benefits,
 .Main__WantConsultant__Capacity,
@@ -9,11 +9,13 @@
   display: flex;
   flex-direction: column;
 }
+.Main__WantConsultant__Presentation,
 .Main__WantConsultant__Benefits,
 .Main__WantConsultant__Capacity,
 .Main__WantConsultant__Position {
   flex-direction: row;
 }
+.Main__WantConsultant__Presentation,
 .Main__WantConsultant__Message,
 .Main__WantConsultant__Benefits,
 .Main__WantConsultant__Capacity,
@@ -24,7 +26,7 @@
 
 /* DISEÑO PARA CELULARES */
 @media (width <= 1470px) {
-  .Main__WantConsultant,
+  .Main__WantConsultant__Presentation,
   .Main__WantConsultant__Benefits,
   .Main__WantConsultant__Message,
   .Main__WantConsultant__Capacity,

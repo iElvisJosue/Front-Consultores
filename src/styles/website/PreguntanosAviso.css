@@ -1,0 +1,26 @@
+.Main__AskUs__Notice--Details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.Main__AskUs__Notice--Details--Text,
+.Main__AskUs__Notice--Details--Text strong {
+  font-size: 2.5rem;
+}
+.Main__AskUs__Notice--Picture {
+  width: 100%;
+  height: 400px;
+  background-image: url("../../public/WhyConsultantInnovation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+@media (width <= 768px) {
+  .Main__AskUs__Notice--Picture {
+    height: 200px;
+  }
+}
