@@ -9,11 +9,11 @@
 }
 .Main__WantConsultant__Position--Details--Title {
   text-align: center;
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__WantConsultant__Position--Details--Text,
 .Main__WantConsultant__Position--Details--Text strong {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__WantConsultant__Position--Picture {
   width: 100%;
@@ -37,7 +37,7 @@
 
 .Main__WantConsultant__Position--Text--Button--Text {
   z-index: 1;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__WantConsultant__Position--Text--Button::after {
   content: "";

@@ -3,13 +3,13 @@ import "../../../styles/website/InicioEstandares.css";
 export default function InicioEstandares() {
   return (
     <div className="Main__Brown">
-      <section className="Main__Standards">
-        <picture className="Main__Standards--Picture"></picture>
-        <span className="Main__Standards--Details">
-          <p className="Main__Standards--Details--Title">
+      <section className="Main__Home__Standards">
+        <picture className="Main__Home__Standards--Picture"></picture>
+        <span className="Main__Home__Standards--Details">
+          <p className="Main__Home__Standards--Details--Title">
             Exigimos los más altos estándares
           </p>
-          <p className="Main__Standards--Details--Details">
+          <p className="Main__Home__Standards--Details--Details">
             Nuestro marco de cumplimiento y estándares de selección, le permite
             a nuestros clientes relacionarse con verdaderos expertos.
             <br />A través de una plataforma confiable, respaldada por

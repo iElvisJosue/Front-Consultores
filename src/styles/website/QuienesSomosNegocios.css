@@ -17,10 +17,10 @@
   gap: 20px;
 }
 .Main__About__Business--Title {
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__About__Business--Title--Text {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 /* ESTILOS PARA CELULARES */
 @media (width <= 768px) {

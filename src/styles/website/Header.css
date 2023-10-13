@@ -35,7 +35,7 @@
 }
 .Main__Header--Menu--Item--Link {
   padding: 10px 20px;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   background: var(--White);
   border-radius: var(--BorderRadius);
   border: 2px solid transparent;
@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 .Main__Header--Button ion-icon {
-  font-size: 3.5rem;
+  font-size: 2em;
 }
 /* ESTILOS PARA EL MENÚ */
 .Main__Header--Navbar {
@@ -84,14 +84,14 @@
   padding: 10px 20px;
   background-color: var(--White);
   border: none;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
   cursor: pointer;
 }
 .Main__Header--Navbar a {
   color: var(--White);
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 .Main__Header--Navbar.Show {
@@ -99,7 +99,7 @@
 }
 @media (width <= 1470px) {
   .Main__Header--Menu--Item--Link {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }
 

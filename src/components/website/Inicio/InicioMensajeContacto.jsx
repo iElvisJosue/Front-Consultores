@@ -3,9 +3,9 @@ import "../../../styles/website/InicioMensajeContacto.css";
 export default function InicioMensajeContacto() {
   return (
     <div className="Main__White">
-      <section className="Main__ContactMessage">
-        <span className="Main__ContactMessage--Details">
-          <p className="Main__ContactMessage--Details--Text">
+      <section className="Main__Home__ContactMessage">
+        <span className="Main__Home__ContactMessage--Details">
+          <p className="Main__Home__ContactMessage--Details--Text">
             Cuando necesitas acelerar tu investigación, la asesoría de la
             persona adecuada marca la diferencia. Consultor-ES te conecta con
             los mejores consultores y expertos de las empresas y firmas más
@@ -23,7 +23,7 @@ export default function InicioMensajeContacto() {
             apoyarte a alcanzarlos.
           </p>
         </span>
-        <picture className="Main__ContactMessage--Picture"></picture>
+        <picture className="Main__Home__ContactMessage--Picture"></picture>
       </section>
     </div>
   );

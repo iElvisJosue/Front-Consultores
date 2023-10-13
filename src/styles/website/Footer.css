@@ -11,18 +11,18 @@
 }
 .Main__Footer--Text {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__Footer--Link {
   display: flex;
   gap: 20px;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__Footer--Link a ion-icon {
   transform: translateY(3px);
   color: var(--Black);
   transition: 0.3s ease-in-out all;
-  font-size: 3.5rem;
+  font-size: 1.3em;
 }
 .Main__Footer--Link a:hover ion-icon {
   transform: translateY(-5px);

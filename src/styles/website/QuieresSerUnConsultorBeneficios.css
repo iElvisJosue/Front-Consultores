@@ -19,10 +19,10 @@
   gap: 20px;
 }
 .Main__WantConsultant__Benefits--Title {
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__WantConsultant__Benefits--Title--Text {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__WantConsultant__Benefits--Text--Button {
   position: relative;
@@ -39,7 +39,7 @@
 }
 .Main__WantConsultant__Benefits--Text--Button--Text {
   z-index: 1;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__WantConsultant__Benefits--Text--Button::after {
   content: "";

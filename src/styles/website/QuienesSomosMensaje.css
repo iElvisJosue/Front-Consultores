@@ -1,7 +1,7 @@
 /* ESTILOS PARA EL MENSAJE */
 .Main__About__Message--Title {
   text-align: center;
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__About__Message--Picture {
   height: 400px;

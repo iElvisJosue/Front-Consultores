@@ -19,10 +19,10 @@
   gap: 20px;
 }
 .Main__WhyConsultant__Help--Title {
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__WhyConsultant__Help--Title--Text {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 @media (width <= 970px) {
   .Main__WhyConsultant__Help--Picture--Left,

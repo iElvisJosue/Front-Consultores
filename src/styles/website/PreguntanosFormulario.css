@@ -2,16 +2,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
 }
 .Main__AskUs__Form--Presentation--Title {
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 5.5em;
 }
 .Main__AskUs__Form--Presentation--Subtitle {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__AskUs__Form--Form {
   width: 100%;
@@ -50,9 +50,16 @@
 
   transition: 0.3s ease-in-out all;
 }
+.Main__AskUs__Form--Form--ContainerInputs--Error {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: var(--Red);
+}
 .Main__AskUs__Form--Form--ContainerInputs--Inputs.textArea {
   padding: 10px;
-  resize: none;
+  min-height: 200px;
+  max-height: 700px;
+  resize: vertical;
 }
 .Main__AskUs__Form--Form--ContainerInputs::placeholder {
   font-weight: bold;
@@ -77,7 +84,7 @@
 
 .Main__AskUs__Form--Form--Button--Text {
   z-index: 1;
-  font-size: 2rem;
+  font-size: 1.4em;
 }
 .Main__AskUs__Form--Form--Button::after {
   content: "";

@@ -1,8 +1,8 @@
-.Main__Presentation__Content {
+.Main__Home__Presentation__Content {
   display: flex;
   margin-top: 75px;
 }
-.Main__Presentation__Content--Text {
+.Main__Home__Presentation__Content--Text {
   width: 100%;
   padding: 40px 0;
 
@@ -10,13 +10,13 @@
   flex-direction: column;
   gap: 30px;
 }
-.Main__Presentation__Content--Text--Title {
-  font-size: 6.5rem;
+.Main__Home__Presentation__Content--Text--Title {
+  font-size: 6.5em;
 }
-.Main__Presentation__Content--Text--SubTitle {
-  font-size: 3.5rem;
+.Main__Home__Presentation__Content--Text--SubTitle {
+  font-size: 3.5em;
 }
-.Main__Presentation__Content--Text--Button {
+.Main__Home__Presentation__Content--Text--Button {
   position: relative;
   border: 3px solid var(--Black);
   color: var(--Black);
@@ -29,11 +29,11 @@
   justify-content: center;
 }
 
-.Main__Presentation__Content--Text--Button--Text {
+.Main__Home__Presentation__Content--Text--Button--Text {
   z-index: 1;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
-.Main__Presentation__Content--Text--Button::after {
+.Main__Home__Presentation__Content--Text--Button::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -45,13 +45,13 @@
 
   transition: 0.3s ease-in-out all;
 }
-.Main__Presentation__Content--Text--Button:hover::after {
+.Main__Home__Presentation__Content--Text--Button:hover::after {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
 }
-.Main__Presentation__Content--Image {
+.Main__Home__Presentation__Content--Image {
   width: 100%;
   background-image: url("../../public/Presentation.jpg");
   background-repeat: no-repeat;
@@ -60,33 +60,33 @@
 }
 /* DISEÑO PARA CELULARES */
 @media (width <= 1470px) {
-  .Main__Presentation__Content--Text {
+  .Main__Home__Presentation__Content--Text {
     padding: 40px 20px;
   }
 }
 @media (width <= 1337px) {
-  .Main__Presentation__Content--Text--Button {
+  .Main__Home__Presentation__Content--Text--Button {
     width: 200px;
   }
 }
 @media (width <= 1024px) {
-  .Main__Presentation__Content--Text--Button {
+  .Main__Home__Presentation__Content--Text--Button {
     width: 150px;
   }
 }
 @media (width <= 768px) {
-  .Main__Presentation__Content {
+  .Main__Home__Presentation__Content {
     flex-direction: column-reverse;
   }
-  .Main__Presentation__Content--Image {
+  .Main__Home__Presentation__Content--Image {
     height: 400px;
   }
 }
 @media (width <= 500px) {
-  .Main__Presentation__Content--Image {
+  .Main__Home__Presentation__Content--Image {
     height: 300px;
   }
-  .Main__Presentation__Content--Text--Button {
+  .Main__Home__Presentation__Content--Text--Button {
     height: 50px;
   }
 }

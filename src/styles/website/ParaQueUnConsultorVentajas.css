@@ -7,14 +7,13 @@
 }
 .Main__WhyConsultant__Advantages--Details--Title {
   text-align: center;
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__WhyConsultant__Advantages--Details--Details {
   text-align: center;
 }
-.Main__WhyConsultant__Advantages--Details--Details p,
-.Main__WhyConsultant__Advantages--Details--Details strong {
-  font-size: 2.5rem;
+.Main__WhyConsultant__Advantages--Details--Details p {
+  font-size: 2.5em;
 }
 .Main__WhyConsultant__Advantages--Picture {
   width: 100%;

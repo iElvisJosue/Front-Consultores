@@ -7,9 +7,8 @@
   text-align: center;
   gap: 20px;
 }
-.Main__AskUs__Notice--Details--Text,
-.Main__AskUs__Notice--Details--Text strong {
-  font-size: 2.5rem;
+.Main__AskUs__Notice--Details--Text {
+  font-size: 2.5em;
 }
 .Main__AskUs__Notice--Picture {
   width: 100%;

@@ -4,9 +4,8 @@
   align-items: center;
   text-align: center;
 }
-.Main__WhyConsultant__Innovation--Details--Text,
-.Main__WhyConsultant__Innovation--Details--Text strong {
-  font-size: 2.5rem;
+.Main__WhyConsultant__Innovation--Details--Text {
+  font-size: 2.5em;
 }
 .Main__WhyConsultant__Innovation--Picture {
   width: 100%;

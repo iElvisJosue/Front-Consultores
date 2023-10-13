@@ -21,14 +21,14 @@ export default function InicioServicios() {
 
   const serviceContent = ServicesContent.map((content, index) => {
     return (
-      <article className="Main__Services--Content--Article" key={index}>
-        <picture className="Main__Services--Content--Article--Picture">
+      <article className="Main__Home__Services--Content--Article" key={index}>
+        <picture className="Main__Home__Services--Content--Article--Picture">
           <img src={content.img} alt="Mejores talentos" />
         </picture>
-        <p className="Main__Services--Content--Article--Title">
+        <p className="Main__Home__Services--Content--Article--Title">
           {content.title}
         </p>
-        <p className="Main__Services--Content--Article--Details">
+        <p className="Main__Home__Services--Content--Article--Details">
           {content.text}
         </p>
       </article>
@@ -36,10 +36,10 @@ export default function InicioServicios() {
   });
 
   return (
-    <div className="Main__Brown">
-      <section className="Main__Services">
-        <p className="Main__Services--Title">¿Qué le ofrecemos?</p>
-        <div className="Main__Services--Content">{serviceContent}</div>
+    <div className="Main__Home__Brown">
+      <section className="Main__Home__Services">
+        <p className="Main__Home__Services--Title">¿Qué le ofrecemos?</p>
+        <div className="Main__Home__Services--Content">{serviceContent}</div>
       </section>
     </div>
   );

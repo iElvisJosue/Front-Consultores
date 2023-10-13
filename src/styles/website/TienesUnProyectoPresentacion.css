@@ -11,10 +11,10 @@
   gap: 30px;
 }
 .Main__HaveProject__Presentation--Content--Text--Title {
-  font-size: 6.5rem;
+  font-size: 6.5em;
 }
 .Main__HaveProject__Presentation--Content--Text--SubTitle {
-  font-size: 3.5rem;
+  font-size: 3.5em;
 }
 .Main__HaveProject__Presentation--Content--Text--Button {
   position: relative;
@@ -31,7 +31,7 @@
 
 .Main__HaveProject__Presentation--Content--Text--Button--Text {
   z-index: 1;
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 .Main__HaveProject__Presentation--Content--Text--Button::after {
   content: "";

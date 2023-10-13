@@ -13,7 +13,7 @@ import "../../styles/website/Inicio.css";
 
 export default function Inicio() {
   return (
-    <main className="Main">
+    <main className="Main__Home">
       <Header />
       <InicioPresentacion />
       <InicioVentajas />

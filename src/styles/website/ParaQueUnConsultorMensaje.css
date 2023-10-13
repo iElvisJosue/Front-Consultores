@@ -1,5 +1,5 @@
 .Main__WhyConsultant__Message--Title {
-  font-size: 6.5rem;
+  font-size: 6.5em;
   margin: auto;
   max-width: 80%;
   text-align: center;
@@ -8,7 +8,7 @@
   order: 1;
 }
 .Main__WhyConsultant__Message--Title--Text {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin: auto;
   max-width: 80%;
   text-align: center;
