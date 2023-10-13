@@ -45,7 +45,7 @@ export default function PreguntanosFormulario() {
       validator: {
         required: "Este campo es obligatorio. ⚠️",
         pattern: {
-          value: /[0-9]/,
+          value: /^\d+$/,
           message: "Este campo solo acepta números. 🔢",
         },
         maxLength: {

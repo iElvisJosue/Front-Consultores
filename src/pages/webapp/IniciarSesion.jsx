@@ -1,10 +1,10 @@
 // LIBRERÍAS A USAR
 import { useForm } from "react-hook-form";
-import { Toaster } from "sonner";
-// import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 // CONTEXTOS A USAR
-// import { useGlobal } from "../context/GlobalContext";
+import { useGlobal } from "../../context/GlobalContext";
 
 // COMPONENTES A USAR
 import HeaderForm from "../../components/webapp/global/HeaderForm";
@@ -16,40 +16,39 @@ import usePassword from "../../hooks/usePassword";
 
 // AYUDAS A USAR
 import { loginHeaderProps, loginInputsProps } from "../../helpers/login";
-// import { handleResponseMessages } from "../../helpers/response";
+import { handleResponseMessages } from "../../helpers/response";
 
 // ESTILOS A USAR
-import "../../styles/webapp/Login.css";
+import "../../styles/webapp/IniciarSesion.css";
 
-export default function Login() {
+export default function IniciarSesion() {
+  const navigate = useNavigate();
+  const { login } = useGlobal();
+  const { iconPassword } = usePassword();
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
-  // const { login } = useGlobal();
-  // const navigate = useNavigate();
-  const { iconPassword } = usePassword();
 
-  // const handleSuccessResponse = (res) => {
-  //   toast.success(`¡Bienvenido ${res.userName}!`);
-  //   setTimeout(() => navigate("/Perfil"), 1500);
-  // };
+  const handleSuccessResponse = (res) => {
+    toast.success(`¡Bienvenido ${res.userName}!`);
+    setTimeout(() => navigate("/Perfil"), 1500);
+  };
 
   const checkDataLogin = handleSubmit(async (data) => {
-    console.log(data);
-    // try {
-    //   const res = await login(data);
-    //   if (res.response) {
-    //     const { status, data } = res.response;
-    //     handleResponseMessages({ status, data });
-    //   } else {
-    //     handleSuccessResponse(res);
-    //   }
-    // } catch (error) {
-    //   const { status, data } = error.response;
-    //   handleResponseMessages({ status, data });
-    // }
+    try {
+      const res = await login(data);
+      if (res.response) {
+        const { status, data } = res.response;
+        handleResponseMessages({ status, data });
+      } else {
+        handleSuccessResponse(res);
+      }
+    } catch (error) {
+      const { status, data } = error.response;
+      handleResponseMessages({ status, data });
+    }
   });
 
   return (
