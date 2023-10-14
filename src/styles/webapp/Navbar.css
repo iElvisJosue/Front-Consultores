@@ -71,11 +71,11 @@
 .Main__Navbar--Settings--Options {
   position: absolute;
   right: 0;
-  bottom: -120px;
+  bottom: -70px;
   background: var(--MainPurple);
   color: var(--White);
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
   transform: scale(0);
   transform-origin: top right;

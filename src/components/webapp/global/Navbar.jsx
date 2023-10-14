@@ -50,9 +50,6 @@ export default function Navbar({ navSection }) {
           <li onClick={closingSession}>
             <ion-icon name="log-out-outline"></ion-icon>Salir
           </li>
-          <li>
-            <ion-icon name="settings-outline"></ion-icon>Configuración
-          </li>
         </ul>
       </div>
     </nav>
