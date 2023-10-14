@@ -1,4 +1,4 @@
-import { listOfServices, listOfSector, listOfChallenges } from "./selects";
+import { listOfServices, listOfSector, listOfChallenges } from "./Selectores";
 
 export const registerDataHeaderProps = (role) => {
   return {
@@ -88,7 +88,7 @@ const sharedFields = [
     inputName: "number",
     placeholder: "Número de teléfono",
     validator: {
-      required: "Este campo es obligatorio. ⚠️",
+      required: "¡Este campo es obligatorio! ⚠️",
       pattern: {
         value: /^\d+$/,
         message: "Este campo solo acepta números. 🔢",
@@ -140,13 +140,13 @@ export const registerInformationData = {
     },
     {
       icon: "cash-outline",
-      inputType: "number",
+      inputType: "text",
       inputName: "estimatedValue",
       placeholder: "Presupuesto",
       validator: {
-        required: "Este campo es obligatorio. ⚠️",
+        required: "¡Este campo es obligatorio! ⚠️",
         pattern: {
-          value: /[0-9]/,
+          value: /^\d+$/,
           message: "Este campo solo acepta números. 🔢",
         },
       },

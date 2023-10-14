@@ -15,8 +15,11 @@ import FooterForm from "../../components/webapp/global/FooterForm";
 import usePassword from "../../hooks/usePassword";
 
 // AYUDAS A USAR
-import { loginHeaderProps, loginInputsProps } from "../../helpers/login";
-import { handleResponseMessages } from "../../helpers/response";
+import {
+  loginHeaderProps,
+  loginInputsProps,
+} from "../../helpers/IniciarSesion";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 // ESTILOS A USAR
 import "../../styles/webapp/IniciarSesion.css";

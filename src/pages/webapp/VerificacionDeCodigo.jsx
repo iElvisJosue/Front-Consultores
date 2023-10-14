@@ -18,7 +18,7 @@ import useDisabled from "../../hooks/useDisabled";
 
 // AYUDAS A USAR
 import { codeVerificationHeaderProps } from "../../helpers/VerificacionDeCodigo";
-import { handleResponseMessages } from "../../helpers/response";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 // ESTILOS A USAR
 import "../../styles/webapp/VerificacionDeCodigo.css";
@@ -88,7 +88,7 @@ export default function VerificacionDeCodigo({ role }) {
           </div>
           {errors.codeEntered && (
             <small className="Main__CodeVerification__Form--SmallError">
-              Este campo es requerido. ⚠️
+              ¡Este campo es obligatorio! ⚠️
             </small>
           )}
           <ButtonSubmit text="Comprobar" isDisabled={isDisabled} />

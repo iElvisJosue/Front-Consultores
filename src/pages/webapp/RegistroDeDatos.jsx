@@ -21,7 +21,7 @@ import useDisabled from "../../hooks/useDisabled";
 import useLogout from "../../hooks/useLogout";
 
 // AYUDAS A USAR
-import { handleResponseMessages } from "../../helpers/response";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 import {
   registerDataHeaderProps,
   registerInformationData,

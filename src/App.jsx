@@ -17,6 +17,7 @@ import IniciarSesion from "./pages/webapp/IniciarSesion";
 import VerificacionDeCorreo from "./pages/webapp/VerificacionDeCorreo";
 import VerificacionDeCodigo from "./pages/webapp/VerificacionDeCodigo";
 import RegistroDeDatos from "./pages/webapp/RegistroDeDatos";
+import Perfil from "./pages/webapp/Perfil";
 // PROTECCIÓN DE RUTAS
 import ProtectedByCookies from "./protection/ProtectedByCookies";
 import ProtectedForClients from "./protection/ProtectedForClients";
@@ -79,6 +80,7 @@ function App() {
                     element={<RegistroDeDatos role="Cliente" />}
                   />
                 </Route>
+                <Route path="/Perfil" element={<Perfil />} />
               </Route>
             </Routes>
           </BrowserRouter>

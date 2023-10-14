@@ -17,7 +17,7 @@ import {
   emailVerificationHeaderProps,
   emailValidator,
 } from "../../helpers/VerificacionDeCorreo";
-import { handleResponseMessages } from "../../helpers/response";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 // HOOKS A USAR
 import useDisabled from "../../hooks/useDisabled";

@@ -1,0 +1,13 @@
+.Main__Profile__Information {
+  width: 1440px;
+  min-height: 100vh;
+  padding: 20px;
+  font-size: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.Main__Profile__Information--Content {
+  grid-column: span 3;
+}
