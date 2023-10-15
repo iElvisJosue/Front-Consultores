@@ -7,6 +7,7 @@ import PerfilDelConsultorInformacionPerfil from "./PerfilDelConsultorInformacion
 import PerfilDelConsultorInformacionBanco from "./PerfilDelConsultorInformacionBanco";
 import PerfilDelConsultorInformacionProyectos from "./PerfilDelConsultorInformacionProyectos";
 import PerfilDelConsultorInformacionConfiguracion from "./PerfilDelConsultorInformacionConfiguracion";
+import PerfilDelConsultorInformacionCVResumeEditar from "./PerfilDelConsultorInformacionCVResumeEditar";
 
 // HOOKS A USAR
 import useMenu from "../../../hooks/useMenu";
@@ -25,6 +26,8 @@ export default function PerfilDelConsultorInformacion({
     consultantInformation,
     setCheckCV,
     checkCV,
+    changeMenu,
+    menu,
   };
 
   const profileInformation = {
@@ -32,6 +35,11 @@ export default function PerfilDelConsultorInformacion({
       <PerfilDelConsultorInformacionPerfil {...consultantProfileCommonProps} />
     ),
     CV: <PerfilDelConsultorInformacionCV {...consultantProfileCommonProps} />,
+    CVEditarResume: (
+      <PerfilDelConsultorInformacionCVResumeEditar
+        {...consultantProfileCommonProps}
+      />
+    ),
     Banco: (
       <PerfilDelConsultorInformacionBanco {...consultantProfileCommonProps} />
     ),

@@ -6,6 +6,7 @@ import { ErrorMessage } from "@hookform/error-message";
 
 // COMPONENTES A USAR
 import ButtonSubmit from "../global/ButtonSubmit";
+import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
@@ -67,9 +68,7 @@ export default function PerfilDelConsultorInformacionBancoAgregar({
         }
       }}
     >
-      <p className="Main__Profile__Information--Content--AddBank--Title">
-        {textTitle}
-      </p>
+      <TituloDeLaSeccion>{textTitle}</TituloDeLaSeccion>
       {inputsAddBankProps.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--AddBank--GroupInputs"

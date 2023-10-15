@@ -36,7 +36,7 @@ export const resumeInformationData = [
     validator: {
       required: "¡Este campo es obligatorio! ⚠️",
       maxLength: {
-        value: 500,
+        value: 100,
         message: "¡Este campo no puede tener más de 100 caracteres! 🔠",
       },
     },

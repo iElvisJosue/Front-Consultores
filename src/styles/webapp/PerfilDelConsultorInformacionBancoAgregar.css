@@ -8,13 +8,6 @@
   flex-direction: column;
   gap: 50px;
 }
-.Main__Profile__Information--Content--AddBank--Title {
-  font-size: 2em;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-left: 4px solid var(--MainPurple);
-  color: var(--MainPurple);
-}
 
 .Main__Profile__Information--Content--AddBank--GroupInputs {
   display: flex;
