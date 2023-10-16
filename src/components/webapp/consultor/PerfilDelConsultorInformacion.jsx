@@ -7,10 +7,14 @@ import PerfilDelConsultorInformacionPerfil from "./PerfilDelConsultorInformacion
 import PerfilDelConsultorInformacionBanco from "./PerfilDelConsultorInformacionBanco";
 import PerfilDelConsultorInformacionProyectos from "./PerfilDelConsultorInformacionProyectos";
 import PerfilDelConsultorInformacionConfiguracion from "./PerfilDelConsultorInformacionConfiguracion";
-import PerfilDelConsultorInformacionCVResumeEditar from "./PerfilDelConsultorInformacionCVResumeEditar";
+import PerfilDelConsultorInformacionCVEditarResume from "./PerfilDelConsultorInformacionCVEditarResume";
+import PerfilDelConsultorInformacionCVAdministrarExperiencia from "./PerfilDelConsultorInformacionCVAdministrarExperiencia";
+import PerfilDelConsultorInformacionCVAdministrarEducacion from "./PerfilDelConsultorInformacionCVAdministrarEducacion";
 
 // HOOKS A USAR
 import useMenu from "../../../hooks/useMenu";
+import useID from "../../../hooks/useID";
+("../../../hooks/useID");
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacion.css";
@@ -21,6 +25,7 @@ export default function PerfilDelConsultorInformacion({
   checkCV,
 }) {
   const { changeMenu, menu } = useMenu();
+  const { elementID, setElementID } = useID();
 
   const consultantProfileCommonProps = {
     consultantInformation,
@@ -28,6 +33,8 @@ export default function PerfilDelConsultorInformacion({
     checkCV,
     changeMenu,
     menu,
+    setElementID,
+    elementID,
   };
 
   const profileInformation = {
@@ -36,7 +43,17 @@ export default function PerfilDelConsultorInformacion({
     ),
     CV: <PerfilDelConsultorInformacionCV {...consultantProfileCommonProps} />,
     CVEditarResume: (
-      <PerfilDelConsultorInformacionCVResumeEditar
+      <PerfilDelConsultorInformacionCVEditarResume
+        {...consultantProfileCommonProps}
+      />
+    ),
+    CVAdministrarExperiencia: (
+      <PerfilDelConsultorInformacionCVAdministrarExperiencia
+        {...consultantProfileCommonProps}
+      />
+    ),
+    CVAdministrarEducacion: (
+      <PerfilDelConsultorInformacionCVAdministrarEducacion
         {...consultantProfileCommonProps}
       />
     ),
@@ -57,7 +74,11 @@ export default function PerfilDelConsultorInformacion({
 
   return (
     <div className="Main__Profile__Information">
-      <PerfilMenu changeMenu={changeMenu} menu={menu} />
+      <PerfilMenu
+        setElementID={setElementID}
+        changeMenu={changeMenu}
+        menu={menu}
+      />
       <section className="Main__Profile__Information--Content">
         {profileInformation[menu]}
       </section>

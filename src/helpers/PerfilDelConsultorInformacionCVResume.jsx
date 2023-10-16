@@ -1,11 +1,11 @@
 export const cvInformationResume = (consultantResume) => {
   return [
     {
-      title: "👨‍⚖️ PROFESIÓN:",
+      title: "👨‍⚖️ Profesión:",
       text: consultantResume.profession,
     },
     {
-      title: "📝 RESUMEN BREVE:",
+      title: "📝 Resumen Breve:",
       text: consultantResume.description,
     },
   ];

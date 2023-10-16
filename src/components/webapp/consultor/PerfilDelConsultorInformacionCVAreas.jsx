@@ -19,7 +19,7 @@ export default function PerfilDelConsultorInformacionCVAreas({
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar nueva area" />
+      <ButtonSubmit text="Agregar Nueva Area" />
     </div>
   );
 }

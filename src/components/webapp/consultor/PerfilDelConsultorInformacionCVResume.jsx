@@ -10,6 +10,7 @@ export default function PerfilDelConsultorInformacionCVResume({
   consultantResume,
   changeMenu,
   nameMenu,
+  setElementID,
 }) {
   const informationResume = cvInformationResume(consultantResume);
   return (
@@ -17,6 +18,7 @@ export default function PerfilDelConsultorInformacionCVResume({
       <TituloDeLaSeccion
         changeMenu={changeMenu}
         nameMenu={nameMenu}
+        setElementID={setElementID}
         editable={true}
         id={consultantResume._id}
       >

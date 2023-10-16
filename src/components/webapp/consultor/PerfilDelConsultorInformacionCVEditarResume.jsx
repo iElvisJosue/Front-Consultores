@@ -4,29 +4,33 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 
-// CONTEXTOS A USAR
-import { useConsultant } from "../../../context/ConsultantContext";
-
 // COMPONENTES A USAR
 import ButtonSubmit from "../global/ButtonSubmit";
 import BackSection from "../global/BackSection";
 
 // AYUDAS A USAR
 import { resumeInformationData } from "../../../helpers/PerfilDelConsultorAgregarCV";
-import { handleResponseMessages } from "../../../helpers/Respuestas";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
+import useDataResume from "../../../hooks/useDataResume";
 
 // ESTILOS A USAR
-import "../../../styles/webapp/PerfilDelConsultorInformacionCVResumeEditar.css";
-export default function PerfilDelConsultorInformacionCVResumeEditar({
+import "../../../styles/webapp/PerfilDelConsultorInformacionCVEditarResume.css";
+export default function PerfilDelConsultorInformacionCVEditarResume({
   consultantInformation,
   changeMenu,
   setCheckCV,
   checkCV,
+  setElementID,
 }) {
-  const { updateResume } = useConsultant();
+  const { updateResumeConsultant, backSectionHeaderProps } = useDataResume({
+    consultantInformation,
+    changeMenu,
+    setCheckCV,
+    checkCV,
+    setElementID,
+  });
   const { isDisabled, submitDisabled } = useDisabled();
   const {
     register,
@@ -38,55 +42,34 @@ export default function PerfilDelConsultorInformacionCVResumeEditar({
   });
 
   useEffect(() => {
-    if (consultantInformation) {
-      setValue(
-        "profession",
-        consultantInformation.data.consultantResume.profession
-      );
-      setValue(
-        "description",
-        consultantInformation.data.consultantResume.description
-      );
-    }
+    setValue(
+      "profession",
+      consultantInformation.data.consultantResume.profession
+    );
+    setValue(
+      "description",
+      consultantInformation.data.consultantResume.description
+    );
   }, []);
 
-  const updateResumeConsultant = handleSubmit(async (data) => {
+  const handleResumeConsultant = handleSubmit(async (data) => {
     submitDisabled();
-    try {
-      const res = await updateResume(data);
-      if (res.response) {
-        const { status, data } = res.response;
-        handleResponseMessages({ status, data });
-      } else {
-        const { status, data } = res;
-        handleResponseMessages({ status, data });
-        setCheckCV(!checkCV);
-        changeMenu("CV");
-      }
-    } catch (error) {
-      const { status, data } = error.response;
-      handleResponseMessages({ status, data });
-    }
+    updateResumeConsultant(data);
   });
-
-  const backSectionHeaderProps = {
-    imgUrl: "./ResumenProfesional.png",
-    imgAlt: "Resumen Profesional",
-    title: "Editar Resumen Profesional 📑",
-    changeMenu,
-  };
 
   return (
     <form
       className="Main__Profile__Information--Content--CVResume--Edit"
-      onSubmit={updateResumeConsultant}
+      onSubmit={handleResumeConsultant}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
           e.preventDefault();
         }
       }}
     >
-      <BackSection {...backSectionHeaderProps}>Regresar</BackSection>
+      <BackSection {...backSectionHeaderProps} setElementID={setElementID}>
+        Regresar
+      </BackSection>
       {resumeInformationData.map(
         ({ icon, inputType, inputName, placeholder, validator }, index) => (
           <>

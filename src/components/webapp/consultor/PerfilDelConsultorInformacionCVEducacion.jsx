@@ -7,6 +7,9 @@ import SinInformacion from "../global/SinInformacion";
 
 export default function PerfilDelConsultorInformacionCVEducacion({
   consultantEducation,
+  changeMenu,
+  nameMenu,
+  setElementID,
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVResume">
@@ -17,12 +20,20 @@ export default function PerfilDelConsultorInformacionCVEducacion({
             key={index}
             education={education}
             numberEducation={index + 1}
+            changeMenu={changeMenu}
+            nameMenu={nameMenu}
+            setElementID={setElementID}
           />
         ))
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar nueva educación" />
+      <ButtonSubmit
+        changeMenu={changeMenu}
+        nameMenu={nameMenu}
+        addElement={true}
+        text="Agregar Nueva Educación"
+      />
     </div>
   );
 }

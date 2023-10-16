@@ -9,12 +9,18 @@ import PerfilMenuConsultor from "./PerfilMenuConsultor";
 // ESTILOS A USAR
 import "../../../styles/webapp/Menu.css";
 
-export default function PerfilMenu({ changeMenu, menu }) {
+export default function PerfilMenu({ setElementID, changeMenu, menu }) {
   const { user } = useGlobal();
   const { userName, role } = user;
 
   const profileMenu = {
-    Consultor: <PerfilMenuConsultor changeMenu={changeMenu} menu={menu} />,
+    Consultor: (
+      <PerfilMenuConsultor
+        setElementID={setElementID}
+        changeMenu={changeMenu}
+        menu={menu}
+      />
+    ),
     //   Cliente: <PerfilMenuCliente />,
     //   Administrador: <PerfilMenuAdmin />,
   };

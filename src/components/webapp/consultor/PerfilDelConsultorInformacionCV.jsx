@@ -15,6 +15,7 @@ export default function PerfilDelConsultorInformacionCV({
   setCheckCV,
   checkCV,
   changeMenu,
+  setElementID,
 }) {
   const {
     consultantResume,
@@ -29,6 +30,7 @@ export default function PerfilDelConsultorInformacionCV({
     setCheckCV,
     checkCV,
     changeMenu,
+    setElementID,
   };
 
   return (
@@ -41,10 +43,12 @@ export default function PerfilDelConsultorInformacionCV({
       <PerfilDelConsultorInformacionCVExperiencia
         consultantExperience={consultantExperience}
         {...consultantInformationCVCommonProps}
+        nameMenu="CVAdministrarExperiencia"
       />
       <PerfilDelConsultorInformacionCVEducacion
         consultantEducation={consultantEducation}
         {...consultantInformationCVCommonProps}
+        nameMenu="CVAdministrarEducacion"
       />
       <PerfilDelConsultorInformacionCVAreas
         consultantAreas={consultantAreas}

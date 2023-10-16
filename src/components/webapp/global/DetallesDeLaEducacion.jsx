@@ -3,12 +3,26 @@
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
 import TextoDeLaSeccion from "../global/TextoDeLaSeccion";
 
-export default function DetallesDeLaEducacion({ education, numberEducation }) {
+export default function DetallesDeLaEducacion({
+  education,
+  numberEducation,
+  changeMenu,
+  nameMenu,
+  setElementID,
+}) {
   const { _id, institution, area, educationLevel, startDate, endDate } =
     education;
   return (
     <>
-      <TituloDeLaSeccion title={false} editable={true} deleted={true} id={_id}>
+      <TituloDeLaSeccion
+        changeMenu={changeMenu}
+        nameMenu={nameMenu}
+        setElementID={setElementID}
+        title={false}
+        editable={true}
+        deleted={true}
+        id={_id}
+      >
         Educación {numberEducation} 👨‍🎓
       </TituloDeLaSeccion>
       <TextoDeLaSeccion title="🏫 Institución:" text={institution} />

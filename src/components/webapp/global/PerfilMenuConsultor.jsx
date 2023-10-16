@@ -6,7 +6,11 @@ import { menuOptions } from "../../../helpers/PerfilMenuConsultor";
 // HOOKS A USAR
 import useLogout from "../../../hooks/useLogout";
 
-export default function PerfilMenuConsultor({ changeMenu, menu }) {
+export default function PerfilMenuConsultor({
+  setElementID,
+  changeMenu,
+  menu,
+}) {
   const { closingSession } = useLogout();
 
   return (
@@ -17,7 +21,9 @@ export default function PerfilMenuConsultor({ changeMenu, menu }) {
           className={`Main__Profile__Information--Menu--Options--Item ${
             menu === option.label ? "Active" : ""
           }`}
-          onClick={() => changeMenu(option.label)}
+          onClick={() => {
+            changeMenu(option.label), setElementID(null);
+          }}
         >
           <ion-icon name={option.icon}></ion-icon> {option.text}
         </li>

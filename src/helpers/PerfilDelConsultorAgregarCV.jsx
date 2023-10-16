@@ -113,6 +113,7 @@ export const educationInformationData = [
   {
     icon: "footsteps-outline",
     inputName: "educationLevel",
+    placeholder: "Nivel de estudios",
     isSelect: true,
     typeList: listOfEducationalLevels,
   },

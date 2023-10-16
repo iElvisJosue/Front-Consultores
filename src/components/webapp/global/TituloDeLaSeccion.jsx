@@ -9,10 +9,16 @@ export default function TituloDeLaSeccion({
   title = true,
   changeMenu,
   nameMenu,
+  setElementID,
   children,
 }) {
   const showNewMenu = () => {
+    setElementID(id);
     changeMenu(nameMenu);
+  };
+
+  const deleteElement = () => {
+    setElementID(id);
   };
 
   const classTitleSection = title
@@ -34,7 +40,7 @@ export default function TituloDeLaSeccion({
         {deleted && (
           <button
             className="Main__Profile__Information--TitleSection--Container--Button"
-            onClick={showNewMenu}
+            onClick={deleteElement}
           >
             <ion-icon name="trash-outline"></ion-icon>
           </button>

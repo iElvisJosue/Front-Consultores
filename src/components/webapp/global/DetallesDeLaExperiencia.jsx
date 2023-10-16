@@ -6,11 +6,22 @@ import TextoDeLaSeccion from "../global/TextoDeLaSeccion";
 export default function DetallesDeLaExperiencia({
   experience,
   numberExperience,
+  changeMenu,
+  nameMenu,
+  setElementID,
 }) {
   const { _id, position, company, resume, startDate, endDate } = experience;
   return (
     <>
-      <TituloDeLaSeccion title={false} editable={true} deleted={true} id={_id}>
+      <TituloDeLaSeccion
+        changeMenu={changeMenu}
+        nameMenu={nameMenu}
+        setElementID={setElementID}
+        title={false}
+        editable={true}
+        deleted={true}
+        id={_id}
+      >
         Experiencia {numberExperience} 👨‍⚖️
       </TituloDeLaSeccion>
       <TextoDeLaSeccion title="👨‍🏫 Cargo:" text={position} />

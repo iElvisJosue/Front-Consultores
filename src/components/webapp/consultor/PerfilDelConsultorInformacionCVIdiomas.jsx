@@ -26,7 +26,7 @@ export default function PerfilDelConsultorInformacionCVIdiomas({
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar nuevo idioma" />
+      <ButtonSubmit text="Agregar Nuevo Idioma" />
     </div>
   );
 }

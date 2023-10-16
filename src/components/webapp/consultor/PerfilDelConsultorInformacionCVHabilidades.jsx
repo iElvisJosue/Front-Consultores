@@ -19,7 +19,7 @@ export default function PerfilDelConsultorInformacionCVHabilidades({
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar nueva habilidad" />
+      <ButtonSubmit text="Agregar Nueva Habilidad" />
     </div>
   );
 }

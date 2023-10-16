@@ -34,10 +34,10 @@ body {
   width: 12px; /* Ancho del scroll */
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--Black); /* Color del scroll thumb */
+  background: var(--MainPurple); /* Color del scroll thumb */
 }
 ::-webkit-scrollbar-track {
-  background: var(--BgColor); /* Color del track */
+  background: var(--SecondaryPurple); /* Color del track */
 }
 .Main__Brown {
   background: var(--BgColor);
