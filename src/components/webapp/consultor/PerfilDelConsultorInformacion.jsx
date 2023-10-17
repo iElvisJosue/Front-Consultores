@@ -62,55 +62,22 @@ export default function PerfilDelConsultorInformacion({
     checkCV,
   };
 
-  const profileInformationToLoad = {
-    Perfil: (
-      <PerfilDelConsultorInformacionPerfil {...consultantProfileCommonProps} />
-    ),
-    CV: <PerfilDelConsultorInformacionCV {...consultantProfileCommonProps} />,
-    CVEditarResume: (
-      <PerfilDelConsultorInformacionCVEditarResume
-        {...consultantProfileCommonProps}
-      />
-    ),
-    CVAdministrarExperiencia: (
-      <PerfilDelConsultorInformacionCVAdministrarExperiencia
-        {...consultantProfileCommonProps}
-      />
-    ),
-    CVAdministrarEducacion: (
-      <PerfilDelConsultorInformacionCVAdministrarEducacion
-        {...consultantProfileCommonProps}
-      />
-    ),
-    CVAdministrarArea: (
-      <PerfilDelConsultorInformacionCVAdministrarArea
-        {...consultantProfileCommonProps}
-      />
-    ),
-    CVAdministrarHabilidad: (
-      <PerfilDelConsultorInformacionCVAdministrarHabilidad
-        {...consultantProfileCommonProps}
-      />
-    ),
-    CVAdministrarIdioma: (
-      <PerfilDelConsultorInformacionCVAdministrarIdioma
-        {...consultantProfileCommonProps}
-      />
-    ),
-    Banco: (
-      <PerfilDelConsultorInformacionBanco {...consultantProfileCommonProps} />
-    ),
-    Proyectos: (
-      <PerfilDelConsultorInformacionProyectos
-        {...consultantProfileCommonProps}
-      />
-    ),
-    Configuración: (
-      <PerfilDelConsultorInformacionConfiguracion
-        {...consultantProfileCommonProps}
-      />
-    ),
+  const profileOptionsToRender = {
+    Perfil: PerfilDelConsultorInformacionPerfil,
+    CV: PerfilDelConsultorInformacionCV,
+    CVEditarResume: PerfilDelConsultorInformacionCVEditarResume,
+    CVAdministrarExperiencia:
+      PerfilDelConsultorInformacionCVAdministrarExperiencia,
+    CVAdministrarEducacion: PerfilDelConsultorInformacionCVAdministrarEducacion,
+    CVAdministrarArea: PerfilDelConsultorInformacionCVAdministrarArea,
+    CVAdministrarHabilidad: PerfilDelConsultorInformacionCVAdministrarHabilidad,
+    CVAdministrarIdioma: PerfilDelConsultorInformacionCVAdministrarIdioma,
+    Banco: PerfilDelConsultorInformacionBanco,
+    Proyectos: PerfilDelConsultorInformacionProyectos,
+    Configuración: PerfilDelConsultorInformacionConfiguracion,
   };
+
+  const ProfileSectionToRender = profileOptionsToRender[menu];
 
   return (
     <div className="Main__Profile__Information">
@@ -121,7 +88,7 @@ export default function PerfilDelConsultorInformacion({
         menu={menu}
       />
       <section className="Main__Profile__Information--Content">
-        {profileInformationToLoad[menu]}
+        <ProfileSectionToRender {...consultantProfileCommonProps} />
       </section>
     </div>
   );

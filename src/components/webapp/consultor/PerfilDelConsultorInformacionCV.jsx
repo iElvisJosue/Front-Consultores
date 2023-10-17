@@ -40,33 +40,33 @@ export default function PerfilDelConsultorInformacionCV({
   return (
     <>
       <PerfilDelConsultorInformacionCVResume
-        consultantResume={consultantResume}
         {...consultantInformationCVCommonProps}
+        consultantResume={consultantResume}
         nameMenu="CVEditarResume"
       />
       <PerfilDelConsultorInformacionCVExperiencia
-        consultantExperience={consultantExperience}
         {...consultantInformationCVCommonProps}
+        consultantExperience={consultantExperience}
         nameMenu="CVAdministrarExperiencia"
       />
       <PerfilDelConsultorInformacionCVEducacion
-        consultantEducation={consultantEducation}
         {...consultantInformationCVCommonProps}
+        consultantEducation={consultantEducation}
         nameMenu="CVAdministrarEducacion"
       />
       <PerfilDelConsultorInformacionCVAreas
-        consultantAreas={consultantAreas}
         {...consultantInformationCVCommonProps}
+        consultantAreas={consultantAreas}
         nameMenu="CVAdministrarArea"
       />
       <PerfilDelConsultorInformacionCVHabilidades
-        consultantSkills={consultantSkills}
         {...consultantInformationCVCommonProps}
+        consultantSkills={consultantSkills}
         nameMenu="CVAdministrarHabilidad"
       />
       <PerfilDelConsultorInformacionCVIdiomas
-        consultantLanguages={consultantLanguages}
         {...consultantInformationCVCommonProps}
+        consultantLanguages={consultantLanguages}
         nameMenu="CVAdministrarIdioma"
       />
     </>

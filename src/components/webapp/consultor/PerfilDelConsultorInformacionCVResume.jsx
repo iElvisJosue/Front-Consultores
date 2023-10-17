@@ -13,6 +13,11 @@ export default function PerfilDelConsultorInformacionCVResume({
   setElementID,
 }) {
   const informationResume = cvInformationResume(consultantResume);
+  const textInformationResume = informationResume.map(
+    ({ title, text }, index) => (
+      <TextoDeLaSeccion key={index} title={title} text={text} />
+    )
+  );
   return (
     <div className="Main__Profile__Information--Content--CVResume">
       <TituloDeLaSeccion
@@ -24,9 +29,7 @@ export default function PerfilDelConsultorInformacionCVResume({
       >
         Resumen Profesional 📑
       </TituloDeLaSeccion>
-      {informationResume.map(({ title, text }, index) => (
-        <TextoDeLaSeccion key={index} title={title} text={text} />
-      ))}
+      {textInformationResume}
     </div>
   );
 }
