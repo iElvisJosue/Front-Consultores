@@ -116,7 +116,7 @@ export default function PerfilDelConsultorInformacionCVAdministrarEducacion({
                   type={inputType}
                   {...register(inputName, validator)}
                   className="Main__Profile__Information--Content--CVEducation--Administration--ContainerInputs--Inputs"
-                  placeholder={placeholder}
+                  placeholder="Escribe aquí..."
                 />
               )}
             </div>

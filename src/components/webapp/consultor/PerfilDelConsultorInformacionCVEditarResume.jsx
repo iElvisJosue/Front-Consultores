@@ -86,14 +86,14 @@ export default function PerfilDelConsultorInformacionCVEditarResume({
                   type={inputType}
                   {...register(inputName, validator)}
                   className="Main__Profile__Information--Content--CVResume--Edit--ContainerInputs--Inputs"
-                  placeholder={placeholder}
+                  placeholder="Escribe aquí..."
                 />
               ) : (
                 <textarea
                   type={inputType}
                   {...register(inputName, validator)}
                   className="Main__Profile__Information--Content--CVResume--Edit--ContainerInputs--Inputs Textarea"
-                  placeholder={placeholder}
+                  placeholder="Escribe aquí..."
                 />
               )}
             </div>

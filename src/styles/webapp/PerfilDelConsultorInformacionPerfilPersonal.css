@@ -1,4 +1,4 @@
-.Main__Profile__Information--Content--AddBank {
+.Main__Profile__Information--Content--ProfileUser--Edit {
   position: relative;
   padding: 20px;
   background: var(--White);
@@ -8,20 +8,30 @@
   flex-direction: column;
   gap: 20px;
 }
+.Main__Profile__Information--Content--ProfileUser--Edit--LastUpdate {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  font-size: 1em;
+  color: var(--MainPurple);
 
-.Main__Profile__Information--Content--AddBank--GroupInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs {
   display: flex;
   gap: 20px;
   width: 100%;
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--Inputs {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--Inputs {
   font-size: 1.6em;
   min-height: 65px;
   height: 65px;
@@ -36,7 +46,7 @@
 
   transition: 0.3s ease-in-out all;
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--Icon {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--Icon {
   position: absolute;
   top: 30px;
   width: 50px;
@@ -48,14 +58,14 @@
   justify-content: center;
   align-items: center;
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--Inputs:focus {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--Inputs:focus {
   border-color: var(--MainPurple);
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--Inputs::placeholder {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--Inputs::placeholder {
   font-weight: bold;
   color: var(--MainPurple);
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--TitleInput {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--TitleInput {
   font-size: 1.6em;
   min-height: 20px;
   height: 20px;
@@ -63,14 +73,14 @@
   font-weight: bold;
   color: var(--MainPurple);
 }
-.Main__Profile__Information--Content--AddBank--GroupInputs--Container--SmallError {
+.Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs--Container--SmallError {
   width: 100%;
   font-size: 1.3em;
   color: var(--Red);
   font-weight: bold;
 }
 @media (width <= 800px) {
-  .Main__Profile__Information--Content--AddBank--GroupInputs {
+  .Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs {
     display: flex;
     flex-direction: column;
   }

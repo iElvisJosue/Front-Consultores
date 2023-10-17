@@ -3,6 +3,7 @@ import {
   getConsultantRequest,
   getProjectsAvailableRequest,
   registerDataConsultantRequest,
+  updateDataConsultantRequest,
   registerDataBankRequest,
   addResumeCVRequest,
   addNewExperienceRequest,
@@ -165,6 +166,20 @@ export const ConsultantProvider = ({ children }) => {
     }
   };
 
+  const updateProfileConsultant = async (data) => {
+    try {
+      const res = await updateDataConsultantRequest(data);
+      if (!res.data) {
+        // return setError();
+        console.log("ERROR UPDATE CONSULTANT");
+      }
+      return res;
+    } catch (error) {
+      //   setError();
+      console.log("ERROR UPDATE CONSULTANT 2");
+      return error;
+    }
+  };
   const updateResume = async (data) => {
     try {
       const res = await updateResumeRequest(data);
@@ -321,6 +336,7 @@ export const ConsultantProvider = ({ children }) => {
         addArea,
         addLanguage,
         addSkill,
+        updateProfileConsultant,
         updateResume,
         updateExperience,
         updateEducation,

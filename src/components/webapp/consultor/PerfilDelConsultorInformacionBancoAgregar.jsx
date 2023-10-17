@@ -101,6 +101,7 @@ export default function PerfilDelConsultorInformacionBancoAgregar({
                   type={type}
                   {...register(name, validator)}
                   className="Main__Profile__Information--Content--AddBank--GroupInputs--Container--Inputs"
+                  placeholder="Escribe aquí..."
                 />
                 <span className="Main__Profile__Information--Content--AddBank--GroupInputs--Container--Icon">
                   <ion-icon name={icon}></ion-icon>

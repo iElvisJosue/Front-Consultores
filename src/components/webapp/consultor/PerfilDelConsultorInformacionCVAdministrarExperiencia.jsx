@@ -104,14 +104,14 @@ export default function PerfilDelConsultorInformacionCVAdministrarExperiencia({
                   type={inputType}
                   {...register(inputName, validator)}
                   className="Main__Profile__Information--Content--CVExperience--Administration--ContainerInputs--Inputs"
-                  placeholder={placeholder}
+                  placeholder="Escribe aquí..."
                 />
               ) : (
                 <textarea
                   type={inputType}
                   {...register(inputName, validator)}
                   className="Main__Profile__Information--Content--CVExperience--Administration--ContainerInputs--Inputs Textarea"
-                  placeholder={placeholder}
+                  placeholder="Escribe aquí..."
                 />
               )}
             </div>

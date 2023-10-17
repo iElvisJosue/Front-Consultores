@@ -4,6 +4,10 @@ import axios from "./axios";
 export const registerDataConsultantRequest = (data) =>
   axios.post("/consultant/registerDataConsultant", data);
 
+// PETICIÓN PARA ACTUALIZAR LOS DATOS DEL CONSULTOR
+export const updateDataConsultantRequest = (data) =>
+  axios.put("/consultant/updateDataConsultant", data);
+
 // PETICIÓN PARA OBTENER EL PERFIL DEL CONSULTOR LOGUEADO
 export const getConsultantRequest = () =>
   axios.get("/consultant/getInformationConsultant");
