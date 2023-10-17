@@ -141,6 +141,26 @@ export const listOfLanguages = languages.map((language, index) =>
   )
 );
 
+// LISTA DE NIVELES DEL LENGUAJE
+const levelLanguages = [
+  "Muy Básico",
+  "Básico",
+  "Intermedio",
+  "Avanzado",
+  "Nativo",
+];
+export const listOfLevelLanguages = levelLanguages.map((level, index) =>
+  index === 0 ? (
+    <option key={index} value={level} defaultValue={true}>
+      {level}
+    </option>
+  ) : (
+    <option key={index} value={level}>
+      {level}
+    </option>
+  )
+);
+
 // LISTA DE SERVICIOS
 const services = [
   "Selecciona un servicio",

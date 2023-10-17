@@ -11,9 +11,13 @@ export const inputsAddBankProps = [
           value: /^\d+$/,
           message: "Este campo solo acepta números (Sin espacios). 🔢",
         },
+        minLength: {
+          value: 10,
+          message: "¡Este campo no puede tener menos de 10 números! 🔢",
+        },
         maxLength: {
           value: 34,
-          message: "¡Este campo no puede tener más de 34 caracteres! 🔠",
+          message: "¡Este campo no puede tener más de 34 números! 🔢",
         },
       },
     },

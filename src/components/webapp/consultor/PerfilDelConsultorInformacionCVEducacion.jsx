@@ -10,6 +10,8 @@ export default function PerfilDelConsultorInformacionCVEducacion({
   changeMenu,
   nameMenu,
   setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVResume">
@@ -23,6 +25,8 @@ export default function PerfilDelConsultorInformacionCVEducacion({
             changeMenu={changeMenu}
             nameMenu={nameMenu}
             setElementID={setElementID}
+            setShowModalDelete={setShowModalDelete}
+            setTypeElementDelete={setTypeElementDelete}
           />
         ))
       ) : (

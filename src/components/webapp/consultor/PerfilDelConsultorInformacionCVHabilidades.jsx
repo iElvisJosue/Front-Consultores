@@ -6,20 +6,39 @@ import SinInformacion from "../global/SinInformacion";
 
 export default function PerfilDelConsultorInformacionCVHabilidades({
   consultantSkills,
+  changeMenu,
+  nameMenu,
+  setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVResume">
-      <TituloDeLaSeccion>Habilidades Personales 🧩</TituloDeLaSeccion>
+      <TituloDeLaSeccion>Habilidades Personales 🎲</TituloDeLaSeccion>
       {consultantSkills.length > 0 ? (
         consultantSkills.map(({ _id, nameSkill }, index) => (
-          <TituloDeLaSeccion title={false} key={index} deleted={true} id={_id}>
+          <TituloDeLaSeccion
+            id={_id}
+            key={index}
+            setElementID={setElementID}
+            setShowModalDelete={setShowModalDelete}
+            setTypeElementDelete={setTypeElementDelete}
+            nameMenu={nameMenu}
+            title={false}
+            deleted={true}
+          >
             {nameSkill}
           </TituloDeLaSeccion>
         ))
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar Nueva Habilidad" />
+      <ButtonSubmit
+        addElement={true}
+        changeMenu={changeMenu}
+        nameMenu={nameMenu}
+        text="Agregar Nueva Habilidad"
+      />
     </div>
   );
 }

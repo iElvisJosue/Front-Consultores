@@ -6,20 +6,39 @@ import SinInformacion from "../global/SinInformacion";
 
 export default function PerfilDelConsultorInformacionCVAreas({
   consultantAreas,
+  changeMenu,
+  nameMenu,
+  setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVResume">
       <TituloDeLaSeccion>Areas de especialidad 🛠️</TituloDeLaSeccion>
       {consultantAreas.length > 0 ? (
         consultantAreas.map(({ _id, nameArea }, index) => (
-          <TituloDeLaSeccion title={false} key={index} deleted={true} id={_id}>
+          <TituloDeLaSeccion
+            id={_id}
+            key={index}
+            setElementID={setElementID}
+            setShowModalDelete={setShowModalDelete}
+            setTypeElementDelete={setTypeElementDelete}
+            nameMenu={nameMenu}
+            title={false}
+            deleted={true}
+          >
             {nameArea}
           </TituloDeLaSeccion>
         ))
       ) : (
         <SinInformacion />
       )}
-      <ButtonSubmit text="Agregar Nueva Area" />
+      <ButtonSubmit
+        changeMenu={changeMenu}
+        nameMenu={nameMenu}
+        addElement={true}
+        text="Agregar Nueva Especialidad"
+      />
     </div>
   );
 }

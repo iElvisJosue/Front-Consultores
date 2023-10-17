@@ -133,8 +133,28 @@ export const educationInformationData = [
 ];
 export const skillsInformationData = [
   {
+    title: "Selecciona tu especialidad:",
     icon: "medal-outline",
     inputName: "nameArea",
     typeList: listOfSpecialtiesAreas,
+  },
+];
+export const abilityInformationData = [
+  {
+    icon: "dice-outline",
+    inputType: "text",
+    inputName: "nameSkill",
+    placeholder: "React JS / HTML / CSS",
+    validator: {
+      required: "¡Este campo es obligatorio! ⚠️",
+      minLength: {
+        value: 3,
+        message: "¡Este campo no puede tener menos de 3 caracteres! 🔠",
+      },
+      maxLength: {
+        value: 100,
+        message: "¡Este campo no puede tener más de 100 caracteres! 🔠",
+      },
+    },
   },
 ];

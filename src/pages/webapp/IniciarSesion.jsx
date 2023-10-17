@@ -36,7 +36,7 @@ export default function IniciarSesion() {
 
   const handleSuccessResponse = (res) => {
     toast.success(`¡Bienvenido ${res.userName}!`);
-    setTimeout(() => navigate("/Perfil"), 1500);
+    setTimeout(() => navigate("/Perfil"), 1000);
   };
 
   const checkDataLogin = handleSubmit(async (data) => {

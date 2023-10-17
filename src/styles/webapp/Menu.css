@@ -33,6 +33,7 @@
   padding: 20px 0;
   background: var(--White);
   border-radius: 0 0 15px 15px;
+  overflow: hidden;
 }
 .Main__Profile__Information--Menu--Options--Item {
   padding: 20px;
@@ -57,4 +58,9 @@
   border-left-color: var(--MainPurple);
   background-color: var(--SecondaryPurple);
   cursor: pointer;
+}
+@media (width <= 800px) {
+  /* .Main__Profile__Information--Menu--Options {
+    height: 0;
+  } */
 }

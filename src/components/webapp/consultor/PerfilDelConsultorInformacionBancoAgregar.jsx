@@ -7,6 +7,7 @@ import { ErrorMessage } from "@hookform/error-message";
 // COMPONENTES A USAR
 import ButtonSubmit from "../global/ButtonSubmit";
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import BackSection from "../global/BackSection";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
@@ -22,14 +23,23 @@ export default function PerfilDelConsultorInformacionBancoAgregar({
   consultantBank,
   setCheckCV,
   checkCV,
+  changeMenu,
+  nameMenu,
 }) {
   const { isDisabled, submitDisabled } = useDisabled();
   const {
     addDataBankConsultant,
     updateDataBankConsultant,
-    textTitle,
+    bankHeaderProps,
     textButton,
-  } = useDataBank({ setCheckCV, checkCV, submitDisabled, consultantBank });
+  } = useDataBank({
+    setCheckCV,
+    checkCV,
+    submitDisabled,
+    consultantBank,
+    changeMenu,
+    nameMenu,
+  });
   const {
     register,
     handleSubmit,
@@ -68,7 +78,11 @@ export default function PerfilDelConsultorInformacionBancoAgregar({
         }
       }}
     >
-      <TituloDeLaSeccion>{textTitle}</TituloDeLaSeccion>
+      {consultantBank ? (
+        <TituloDeLaSeccion>Tu Información Bancaria 💳</TituloDeLaSeccion>
+      ) : (
+        <BackSection {...bankHeaderProps} />
+      )}
       {inputsAddBankProps.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--AddBank--GroupInputs"

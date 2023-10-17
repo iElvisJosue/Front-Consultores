@@ -9,6 +9,8 @@ export default function DetallesDeLaExperiencia({
   changeMenu,
   nameMenu,
   setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
 }) {
   const { _id, position, company, resume, startDate, endDate } = experience;
   return (
@@ -17,6 +19,8 @@ export default function DetallesDeLaExperiencia({
         changeMenu={changeMenu}
         nameMenu={nameMenu}
         setElementID={setElementID}
+        setShowModalDelete={setShowModalDelete}
+        setTypeElementDelete={setTypeElementDelete}
         title={false}
         editable={true}
         deleted={true}

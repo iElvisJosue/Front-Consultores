@@ -10,6 +10,8 @@ export default function TituloDeLaSeccion({
   changeMenu,
   nameMenu,
   setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
   children,
 }) {
   const showNewMenu = () => {
@@ -19,6 +21,8 @@ export default function TituloDeLaSeccion({
 
   const deleteElement = () => {
     setElementID(id);
+    setShowModalDelete(true);
+    setTypeElementDelete(nameMenu);
   };
 
   const classTitleSection = title

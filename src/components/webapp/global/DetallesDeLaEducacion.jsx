@@ -9,6 +9,8 @@ export default function DetallesDeLaEducacion({
   changeMenu,
   nameMenu,
   setElementID,
+  setShowModalDelete,
+  setTypeElementDelete,
 }) {
   const { _id, institution, area, educationLevel, startDate, endDate } =
     education;
@@ -18,6 +20,8 @@ export default function DetallesDeLaEducacion({
         changeMenu={changeMenu}
         nameMenu={nameMenu}
         setElementID={setElementID}
+        setShowModalDelete={setShowModalDelete}
+        setTypeElementDelete={setTypeElementDelete}
         title={false}
         editable={true}
         deleted={true}

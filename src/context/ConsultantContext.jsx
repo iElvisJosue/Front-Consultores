@@ -100,7 +100,6 @@ export const ConsultantProvider = ({ children }) => {
         console.log("ERROR ADD EXPERIENCE");
         // return setError();
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -116,7 +115,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR ADD STUDY");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -131,7 +129,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR ADD AREA");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -146,7 +143,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR ADD LANGUAGE");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -161,7 +157,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR ADD SKILL");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -177,7 +172,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR UPDATE RESUME");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -193,7 +187,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR UPDATE EXPERIENCE");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -209,7 +202,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR UPDATE EDUCATION");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -225,7 +217,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR UPDATE DATA BANK");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -241,7 +232,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR DELETE EXPERIENCE");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -257,7 +247,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR DELETE STUDY");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -273,7 +262,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR DELETE AREA");
       }
-      console.log(res);
       return res;
     } catch (error) {
       //   setError();
@@ -289,7 +277,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR DELETE LANGUAGE");
       }
-      console.log(res);
       return res;
     } catch (error) {
       console.log("ERROR DELETE LANGUAGE 2");
@@ -302,7 +289,6 @@ export const ConsultantProvider = ({ children }) => {
         // return setError();
         console.log("ERROR DELETE SKILL");
       }
-      console.log(res);
       return res;
     } catch (error) {
       console.log("ERROR DELETE SKILL 2");

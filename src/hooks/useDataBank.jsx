@@ -45,9 +45,13 @@ export default function useDataBank({
     handleResponseMessages({ status, data });
   };
 
-  const textTitle = consultantBank
-    ? "Tu Información Bancaria 💳"
-    : "Agregar Información Bancaria ✍️";
+  const bankHeaderProps = {
+    backButton: false,
+    imgUrl: "./InformacionBancaria.png",
+    imgAlt: "Informacion Bancaria",
+    title: "Agregar Información Bancaria",
+  };
+
   const textButton = consultantBank
     ? "Actualizar Información Bancaria"
     : "Agregar Información Bancaria";
@@ -55,7 +59,7 @@ export default function useDataBank({
   return {
     addDataBankConsultant,
     updateDataBankConsultant,
-    textTitle,
     textButton,
+    bankHeaderProps,
   };
 }
