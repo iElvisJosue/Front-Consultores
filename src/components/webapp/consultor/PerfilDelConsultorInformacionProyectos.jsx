@@ -18,7 +18,7 @@ export default function PerfilDelConsultorInformacionProyectos({
 
   if (searching) return <Loader text="Cargando..." />;
   if (projectsAvailable) {
-    const amountProjects = projectsAvailable.projectInformation.length;
+    const amountProjects = projectsAvailable.length;
     return (
       <PerfilDelConsultorInformacionProyectosDisponibles
         projectsAvailable={projectsAvailable}

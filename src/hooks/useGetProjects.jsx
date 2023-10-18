@@ -15,7 +15,7 @@ export default function useGetProjects({ consultantAreas }) {
       if (consultantAreas) {
         const data = consultantAreas;
         const res = await getProjectsAvailable(data);
-        if (!res.data[0]) {
+        if (res.data[0] !== "NO HAY PROYECTOS") {
           setProjectsAvailable(res.data);
         }
       }

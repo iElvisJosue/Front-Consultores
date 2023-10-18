@@ -6,15 +6,12 @@ export default function PerfilDelConsultorInformacionProyectosDisponibles({
   projectsAvailable,
   amountProjects,
 }) {
-  const { projectInformation } = projectsAvailable;
-  console.log(projectsAvailable);
-
   return (
     <div className="Main__Profile__Information--Content--ProjectsAvailable">
       <TituloDeLaSeccion>
-        Proyectos Disponibles: {amountProjects}
+        Proyectos Disponibles: {amountProjects} ✨
       </TituloDeLaSeccion>
-      {projectInformation.map(
+      {projectsAvailable.map(
         ({ nameProject, areaProject, timeProject, paymentProject }, index) => (
           <div
             className="Main__Profile__Information--Content--ProjectsAvailable--Container"
