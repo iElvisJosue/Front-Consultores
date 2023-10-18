@@ -13,7 +13,7 @@ export default function PerfilDelConsultorInformacionCVIdiomas({
   setTypeElementDelete,
 }) {
   return (
-    <div className="Main__Profile__Information--Content--CVResume">
+    <div className="Main__Profile__Information--Content--CVLanguages">
       <TituloDeLaSeccion>Idiomas 🌍</TituloDeLaSeccion>
       {consultantLanguages.length > 0 ? (
         consultantLanguages.map(

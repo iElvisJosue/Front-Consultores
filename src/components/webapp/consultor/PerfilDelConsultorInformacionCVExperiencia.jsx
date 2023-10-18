@@ -14,7 +14,7 @@ export default function PerfilDelConsultorInformacionCVExperiencia({
   setTypeElementDelete,
 }) {
   return (
-    <div className="Main__Profile__Information--Content--CVResume">
+    <div className="Main__Profile__Information--Content--CVExperience">
       <TituloDeLaSeccion>Experiencia Profesional 💼</TituloDeLaSeccion>
       {consultantExperience.length > 0 ? (
         consultantExperience.map((experience, index) => (

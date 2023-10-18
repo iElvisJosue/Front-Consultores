@@ -13,7 +13,7 @@ export default function PerfilDelConsultorInformacionCVAreas({
   setTypeElementDelete,
 }) {
   return (
-    <div className="Main__Profile__Information--Content--CVResume">
+    <div className="Main__Profile__Information--Content--CVAreas">
       <TituloDeLaSeccion>Areas de especialidad 🛠️</TituloDeLaSeccion>
       {consultantAreas.length > 0 ? (
         consultantAreas.map(({ _id, nameArea }, index) => (

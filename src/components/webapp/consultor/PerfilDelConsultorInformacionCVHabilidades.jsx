@@ -13,7 +13,7 @@ export default function PerfilDelConsultorInformacionCVHabilidades({
   setTypeElementDelete,
 }) {
   return (
-    <div className="Main__Profile__Information--Content--CVResume">
+    <div className="Main__Profile__Information--Content--CVAbilities">
       <TituloDeLaSeccion>Habilidades Personales 🎲</TituloDeLaSeccion>
       {consultantSkills.length > 0 ? (
         consultantSkills.map(({ _id, nameSkill }, index) => (
