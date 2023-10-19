@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // COMPONENTES A USAR
-import PerfilDelConsultorInformacionPerfilUsuario from "../../../components/webapp/consultor/PerfilDelConsultorInformacionPerfilUsuario";
+import PerfilInformacionPerfilUsuario from "../global/PerfilInformacionPerfilUsuario";
 import PerfilDelConsultorInformacionPerfilPersonal from "../../../components/webapp/consultor/PerfilDelConsultorInformacionPerfilPersonal";
 
 export default function PerfilDelConsultorInformacionPerfil({
@@ -14,7 +14,7 @@ export default function PerfilDelConsultorInformacionPerfil({
 
   return (
     <>
-      <PerfilDelConsultorInformacionPerfilUsuario />
+      <PerfilInformacionPerfilUsuario />
       <PerfilDelConsultorInformacionPerfilPersonal
         consultantPersonalData={consultantPersonalData}
         setCheckCV={setCheckCV}

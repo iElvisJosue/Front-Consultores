@@ -6,6 +6,7 @@ export default function TituloDeLaSeccion({
   id = "",
   editable = false,
   deleted = false,
+  completed = false,
   title = true,
   changeMenu,
   nameMenu,
@@ -14,11 +15,15 @@ export default function TituloDeLaSeccion({
   setTypeElementDelete,
   children,
 }) {
-  const showNewMenu = () => {
+  const editElement = () => {
     setElementID(id);
     changeMenu(nameMenu);
   };
 
+  const completeElement = () => {
+    setElementID(id);
+    changeMenu(nameMenu);
+  };
   const deleteElement = () => {
     setElementID(id);
     setShowModalDelete(true);
@@ -33,10 +38,18 @@ export default function TituloDeLaSeccion({
     <p className={classTitleSection}>
       {children}
       <span className="Main__Profile__Information--TitleSection--Container">
+        {completed && (
+          <button
+            className="Main__Profile__Information--TitleSection--Container--Button"
+            onClick={completeElement}
+          >
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </button>
+        )}
         {editable && (
           <button
             className="Main__Profile__Information--TitleSection--Container--Button"
-            onClick={showNewMenu}
+            onClick={editElement}
           >
             <ion-icon name="color-wand-outline"></ion-icon>
           </button>

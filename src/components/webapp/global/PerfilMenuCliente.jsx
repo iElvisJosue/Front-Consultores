@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 
 // AYUDAS A USAR
-import { menuOptions } from "../../../helpers/PerfilMenuConsultor";
+import { menuOptions } from "../../../helpers/PerfilMenuCliente";
 
 // HOOKS A USAR
 import useLogout from "../../../hooks/useLogout";
 
-export default function PerfilMenuConsultor({
+export default function PerfilMenuCliente({
   setElementID,
   changeMenu,
   menu,

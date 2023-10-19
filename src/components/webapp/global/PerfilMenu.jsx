@@ -8,6 +8,7 @@ import useShowMenu from "../../../hooks/useShowMenu";
 
 // COMPONENTES A USAR
 import PerfilMenuConsultor from "./PerfilMenuConsultor";
+import PerfilMenuCliente from "./PerfilMenuCliente";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/Menu.css";
@@ -17,17 +18,19 @@ export default function PerfilMenu({ setElementID, changeMenu, menu }) {
   const { user } = useGlobal();
   const { userName, role } = user;
 
-  const profileMenu = {
-    Consultor: (
-      <PerfilMenuConsultor
-        setElementID={setElementID}
-        changeMenu={changeMenu}
-        menu={menu}
-      />
-    ),
-    //   Cliente: <PerfilMenuCliente />,
+  const menuProps = {
+    setElementID,
+    changeMenu,
+    menu,
+  };
+
+  const profileMenuToRender = {
+    Consultor: PerfilMenuConsultor,
+    Cliente: PerfilMenuCliente,
     //   Administrador: <PerfilMenuAdmin />,
   };
+
+  const MenuToRender = profileMenuToRender[role];
 
   const classMenuOptions = showMenu
     ? "Main__Profile__Information--Menu Show"
@@ -49,7 +52,7 @@ export default function PerfilMenu({ setElementID, changeMenu, menu }) {
           <ion-icon name="chevron-down-outline"></ion-icon>
         </button>
       </div>
-      {profileMenu[role]}
+      <MenuToRender {...menuProps} />
     </aside>
   );
 }

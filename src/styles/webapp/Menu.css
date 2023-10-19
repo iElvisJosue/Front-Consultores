@@ -48,10 +48,48 @@
   .Main__Profile__Information--Menu--Profile--Button {
   transform: rotate(-180deg);
 }
+.Main__Profile__Information--Menu--Options {
+  list-style: none;
+  padding: 20px 0;
+  background: var(--White);
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+}
+.Main__Profile__Information--Menu.Show
+  .Main__Profile__Information--Menu--Options {
+  display: block;
+}
+.Main__Profile__Information--Menu--Options--Item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--MainPurple);
+  font-size: 1.6em;
+  font-weight: bold;
+  border-left: 4px solid transparent;
+  transition: 0.3s ease-in-out all;
+}
+.Main__Profile__Information--Menu--Options--Item ion-icon {
+  font-size: 1.6em;
+}
+.Main__Profile__Information--Menu--Options--Item:hover {
+  border-left-color: var(--MainPurple);
+  background-color: var(--SecondaryPurple);
+  cursor: pointer;
+}
+.Main__Profile__Information--Menu--Options--Item.Active {
+  border-left-color: var(--MainPurple);
+  background-color: var(--SecondaryPurple);
+  cursor: pointer;
+}
 @media (width <= 800px) {
   .Main__Profile__Information--Menu--Profile {
     border: 0;
     border-radius: 15px;
+  }
+  .Main__Profile__Information--Menu--Options {
+    display: none;
   }
   .Main__Profile__Information--Menu--Profile--Button {
     display: flex;

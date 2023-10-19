@@ -1,3 +1,6 @@
+// HELPERS
+import { listOfServices, listOfSector, listOfChallenges } from "./Selectores";
+
 export const dateLastUpdate = (date) => {
   const updatedAtDate = new Date(date);
 
@@ -95,6 +98,74 @@ export const inputsEditDataProfile = [
       icon: "logo-linkedin",
       title: "LinkedIn:",
       type: "text",
+    },
+  ],
+];
+export const inputsEditDataBusiness = [
+  [
+    {
+      icon: "business-outline",
+      inputType: "text",
+      inputName: "businessName",
+      title: "Razón social:",
+      validator: {
+        required: "¡Este campo es obligatorio! ⚠️",
+        maxLength: {
+          value: 100,
+          message: "¡Este campo no puede tener más de 100 caracteres! 🔠",
+        },
+      },
+    },
+    {
+      icon: "cash-outline",
+      inputType: "text",
+      inputName: "estimatedValue",
+      title: "Presupuesto:",
+      validator: {
+        required: "¡Este campo es obligatorio! ⚠️",
+        pattern: {
+          value: /^\d+$/,
+          message: "Este campo solo acepta números. 🔢",
+        },
+      },
+    },
+  ],
+  [
+    {
+      icon: "help-circle-outline",
+      inputType: "text",
+      inputName: "helpMe",
+      title: "¿En qué te podemos ayudar?:",
+      validator: {
+        required: "¡Este campo es obligatorio! ⚠️",
+        maxLength: {
+          value: 2500,
+          message: "¡Este campo no puede tener más de 100 caracteres! 🔠",
+        },
+      },
+    },
+    {
+      icon: "keypad-outline",
+      inputType: "select",
+      inputName: "serviceArea",
+      title: "Servicio de tu negocio:",
+      typeList: listOfServices,
+    },
+  ],
+  [
+    {
+      icon: "keypad-outline",
+      inputType: "select",
+      inputName: "businessSector",
+      title: "Sector de tu negocio:",
+      typeList: listOfSector,
+    },
+    {
+      icon: "extension-puzzle-outline",
+      inputType: "select",
+      inputName: "challenges",
+      title: "Desafío de tu negocio:",
+      typeList: listOfChallenges,
     },
   ],
 ];

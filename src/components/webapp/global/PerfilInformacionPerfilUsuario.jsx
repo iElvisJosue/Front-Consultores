@@ -7,15 +7,15 @@ import { useEffect } from "react";
 import { useGlobal } from "../../../context/GlobalContext";
 
 // COMPONENTES A USAR
-import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import TituloDeLaSeccion from "./TituloDeLaSeccion";
 
 // AYUDAS A USAR
-import { inputsShowDataUserProfile } from "../../../helpers/PerfilDelConsultorInformacionPerfilEditar";
+import { inputsShowDataUserProfile } from "../../../helpers/PerfilnformacionPerfilEditar";
 
 // ESTILOS A USAR
-import "../../../styles/webapp/PerfilDelConsultorInformacionPerfilUsuario.css";
+import "../../../styles/webapp/PerfilInformacionPerfilUsuario.css";
 
-export default function PerfilDelConsultorInformacionPerfilUsuario() {
+export default function PerfilInformacionPerfilUsuario() {
   const { user } = useGlobal();
   const { setValue, register } = useForm();
   useEffect(() => {

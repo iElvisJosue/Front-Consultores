@@ -2,10 +2,12 @@ import { createContext, useContext } from "react";
 import {
   registerDataClientRequest,
   addNewProjectRequest,
+  updateDataClientRequest,
   getInformationClientRequest,
   getConsultantsAvailableForProjectRequest,
   deleteProjectRequest,
   completedProjectRequest,
+  updateDataBusinessClientRequest,
 } from "../api/authClient";
 
 export const ClientContext = createContext();
@@ -29,6 +31,21 @@ export const ClientProvider = ({ children }) => {
       }
       return res;
     } catch (error) {
+      return error;
+    }
+  };
+
+  const updateDataBusinessClient = async (data) => {
+    try {
+      const res = await updateDataBusinessClientRequest(data);
+      if (!res.data) {
+        // return setError();
+        console.log("ERROR UPDATE DATA BUSINESS CLIENT 1");
+      }
+      return res;
+    } catch (error) {
+      //   setError();
+      console.log("ERROR UPDATE DATA BUSINESS CLIENT 2");
       return error;
     }
   };
@@ -84,6 +101,21 @@ export const ClientProvider = ({ children }) => {
     }
   };
 
+  const updateProfileClient = async (data) => {
+    try {
+      const res = await updateDataClientRequest(data);
+      if (!res.data) {
+        // return setError();
+        console.log("ERROR UPDATE CLIENT 1");
+      }
+      return res;
+    } catch (error) {
+      //   setError();
+      console.log("ERROR UPDATE CLIENT 2");
+      return error;
+    }
+  };
+
   const getConsultantsAvailableForProject = async (data) => {
     try {
       const res = await getConsultantsAvailableForProjectRequest(data);
@@ -103,10 +135,12 @@ export const ClientProvider = ({ children }) => {
       value={{
         registerClient,
         getInformationClient,
+        updateProfileClient,
         getConsultantsAvailableForProject,
         addProject,
         deleteProject,
         completedProject,
+        updateDataBusinessClient,
       }}
     >
       {children}

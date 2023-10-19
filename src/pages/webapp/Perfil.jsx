@@ -17,8 +17,8 @@ export default function Perfil() {
 
   const profiles = {
     Consultor: <PerfilDelConsultor user={user} />,
-    Cliente: <PerfilDelCliente />,
-    Administrador: <PerfilDelAdmin />,
+    Cliente: <PerfilDelCliente user={user} />,
+    Administrador: <PerfilDelAdmin user={user} />,
   };
 
   return (

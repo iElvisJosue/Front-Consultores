@@ -16,7 +16,7 @@ import useUpdateConsultant from "../../../hooks/consultor/useUpdateConsultant";
 import {
   inputsEditDataProfile,
   dateLastUpdate,
-} from "../../../helpers/PerfilDelConsultorInformacionPerfilEditar";
+} from "../../../helpers/PerfilnformacionPerfilEditar";
 
 import "../../../styles/webapp/PerfilDelConsultorInformacionPerfilPersonal.css";
 

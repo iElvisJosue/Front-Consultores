@@ -16,7 +16,7 @@ import PerfilDelConsultorInformacionCVAdministrarHabilidad from "./PerfilDelCons
 import PerfilDelConsultorInformacionCVAdministrarIdioma from "./PerfilDelConsultorInformacionCVAdministrarIdioma";
 
 // HOOKS A USAR
-import useMenu from "../../../hooks/consultor/useMenu";
+import useMenu from "../../../hooks/useMenu";
 import useID from "../../../hooks/useID";
 ("../../../hooks/useID");
 import useModalDelete from "../../../hooks/consultor/useModalDelete";

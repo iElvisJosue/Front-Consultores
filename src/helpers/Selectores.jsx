@@ -172,7 +172,12 @@ const services = [
 ];
 export const listOfServices = services.map((service, index) =>
   index === 0 ? (
-    <option key={index} value="No especificado" defaultValue={true} hidden>
+    <option
+      key={index}
+      value="Selecciona un servicio"
+      defaultValue={true}
+      hidden
+    >
       {service}
     </option>
   ) : (
@@ -205,7 +210,7 @@ const sector = [
 ];
 export const listOfSector = sector.map((sector, index) =>
   index === 0 ? (
-    <option key={index} value="No especificado" defaultValue={true} hidden>
+    <option key={index} value="Selecciona un sector" defaultValue={true} hidden>
       {sector}
     </option>
   ) : (
@@ -226,7 +231,7 @@ const challenges = [
 ];
 export const listOfChallenges = challenges.map((challenge, index) =>
   index === 0 ? (
-    <option key={index} value="No especificado" defaultValue={true} hidden>
+    <option key={index} value="Selecciona un reto" defaultValue={true} hidden>
       {challenge}
     </option>
   ) : (
