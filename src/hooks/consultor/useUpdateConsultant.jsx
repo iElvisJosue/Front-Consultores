@@ -1,8 +1,8 @@
 // CONTEXTOS A USAR
-import { useConsultant } from "../context/ConsultantContext";
+import { useConsultant } from "../../context/ConsultantContext";
 
 // AYUDAS A USAR
-import { handleResponseMessages } from "../helpers/Respuestas";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 export default function useUpdateConsultant({ setCheckCV, checkCV }) {
   const { updateProfileConsultant } = useConsultant();

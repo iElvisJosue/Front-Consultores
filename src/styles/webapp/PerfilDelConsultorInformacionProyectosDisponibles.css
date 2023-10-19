@@ -4,17 +4,27 @@
   background: var(--White);
   border-radius: 15px;
 
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .Main__Profile__Information--Content--ProjectsAvailable--Container {
+  grid-column: span 1;
   padding: 10px;
   background: var(--Gray);
+  border-left: 4px solid transparent;
+  transition: 0.3s ease-in-out all;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
+}
+.Main__Profile__Information--Content--ProjectsAvailable--Container:hover {
+  border-color: var(--MainPurple);
+  background-color: var(--SecondaryPurple);
 }
 .Main__Profile__Information--Content--ProjectsAvailable--Container--Details {
   display: flex;
@@ -69,4 +79,9 @@
   button:hover {
   background-color: transparent;
   color: var(--MainPurple);
+}
+@media (width <= 1000px) {
+  .Main__Profile__Information--Content--ProjectsAvailable--Container {
+    grid-column: span 2;
+  }
 }

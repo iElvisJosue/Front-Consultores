@@ -22,6 +22,7 @@ import Perfil from "./pages/webapp/Perfil";
 import ProtectedByCookies from "./protection/ProtectedByCookies";
 import ProtectedForClients from "./protection/ProtectedForClients";
 import ProtectedForConsultants from "./protection/ProtectedForConsultants";
+import ProtectedByUserStatus from "./protection/ProtectedByUserStatus";
 
 // IMPORTAMOS LOS ESTILOS DE LA PAGINA
 import "./index.css";
@@ -80,7 +81,9 @@ function App() {
                     element={<RegistroDeDatos role="Cliente" />}
                   />
                 </Route>
-                <Route path="/Perfil" element={<Perfil />} />
+                <Route element={<ProtectedByUserStatus />}>
+                  <Route path="/Perfil" element={<Perfil />} />
+                </Route>
               </Route>
             </Routes>
           </BrowserRouter>

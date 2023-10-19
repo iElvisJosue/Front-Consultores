@@ -16,13 +16,14 @@ export default function BackSection({
   children,
   changeMenu,
   setElementID,
+  nameMenu = "CV",
   backButton = true,
   title = false,
   imgUrl = false,
   imgAlt = "Descripción de la imagen",
 }) {
   const changeMenuAndID = () => {
-    changeMenu("CV");
+    changeMenu(nameMenu);
     setElementID(null);
   };
 

@@ -31,7 +31,7 @@ export default function PerfilDelConsultorInformacionCVAreas({
           </TituloDeLaSeccion>
         ))
       ) : (
-        <SinInformacion />
+        <SinInformacion>¡No cuentas con areas de especialidad!</SinInformacion>
       )}
       <ButtonSubmit
         changeMenu={changeMenu}

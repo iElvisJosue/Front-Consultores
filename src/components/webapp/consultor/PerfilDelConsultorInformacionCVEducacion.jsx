@@ -30,7 +30,7 @@ export default function PerfilDelConsultorInformacionCVEducacion({
           />
         ))
       ) : (
-        <SinInformacion />
+        <SinInformacion>¡No cuentas con educación profesional!</SinInformacion>
       )}
       <ButtonSubmit
         changeMenu={changeMenu}

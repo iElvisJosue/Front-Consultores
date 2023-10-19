@@ -30,7 +30,7 @@ export default function PreguntanosAviso() {
         <span className="Main__AskUs__Notice--Details">
           {contentText.map(({ title, text }, index) => (
             <p className="Main__AskUs__Notice--Details--Text" key={index}>
-              <strong>{title}:</strong> {text}
+              <strong>{title}</strong> {text}
             </p>
           ))}
         </span>

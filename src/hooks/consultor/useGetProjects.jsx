@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // CONTEXTOS A USAR
-import { useConsultant } from "../context/ConsultantContext";
+import { useConsultant } from "../../context/ConsultantContext";
 
 export default function useGetProjects({ consultantAreas }) {
   const { getProjectsAvailable } = useConsultant();

@@ -4,7 +4,7 @@
 // LIBRERÍAS A USAR
 import { useState, useEffect, useRef } from "react";
 // CONTEXTOS A USAR
-import { useConsultant } from "../context/ConsultantContext";
+import { useConsultant } from "../../context/ConsultantContext";
 
 export default function useProfileConsultant() {
   const [consultantInformation, setConsultantInformation] = useState(false);

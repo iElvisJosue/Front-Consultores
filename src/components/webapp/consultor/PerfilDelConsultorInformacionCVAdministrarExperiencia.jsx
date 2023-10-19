@@ -19,7 +19,7 @@ import {
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataExperience from "../../../hooks/useDataExperience";
+import useDataExperience from "../../../hooks/consultor/useDataExperience";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVAdministrarExperiencia.css";
@@ -52,21 +52,18 @@ export default function PerfilDelConsultorInformacionCVAdministrarExperiencia({
   useEffect(() => {
     if (elementID) {
       const { consultantExperience } = consultantInformation.data;
-      consultantExperience.map(
-        ({ _id, position, company, resume, startDate, endDate }) => {
-          if (_id === elementID) {
-            const formatStartDate = startDate.split(" ");
-            const formatEndDate = endDate.split(" ");
-            setValue("position", position);
-            setValue("company", company);
-            setValue("resume", resume);
-            setValue("experienceMonthStart", formatStartDate[0]);
-            setValue("experienceYearStart", formatStartDate[1]);
-            setValue("experienceMonthEnd", formatEndDate[0]);
-            setValue("experienceYearEnd", formatEndDate[1]);
-          }
-        }
+      const informationExperience = consultantExperience.find(
+        ({ _id }) => _id === elementID
       );
+      const formatStartDate = informationExperience.startDate.split(" ");
+      const formatEndDate = informationExperience.endDate.split(" ");
+      setValue("position", informationExperience.position);
+      setValue("company", informationExperience.company);
+      setValue("resume", informationExperience.resume);
+      setValue("experienceMonthStart", formatStartDate[0]);
+      setValue("experienceYearStart", formatStartDate[1]);
+      setValue("experienceMonthEnd", formatEndDate[0]);
+      setValue("experienceYearEnd", formatEndDate[1]);
     }
   }, []);
 

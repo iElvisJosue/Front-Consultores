@@ -12,7 +12,7 @@ import { abilityInformationData } from "../../../helpers/PerfilDelConsultorAgreg
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataAbility from "../../../hooks/useDataAbility";
+import useDataAbility from "../../../hooks/consultor/useDataAbility";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVAgregarHabilidad.css";

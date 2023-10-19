@@ -11,7 +11,7 @@ import { skillsInformationData } from "../../../helpers/PerfilDelConsultorAgrega
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataArea from "../../../hooks/useDataArea";
+import useDataArea from "../../../hooks/consultor/useDataArea";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVAgregarArea.css";

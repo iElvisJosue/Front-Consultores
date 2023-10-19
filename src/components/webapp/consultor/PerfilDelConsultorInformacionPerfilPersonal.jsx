@@ -10,7 +10,7 @@ import ButtonSubmit from "../global/ButtonSubmit";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useUpdateConsultant from "../../../hooks/useUpdateConsultant";
+import useUpdateConsultant from "../../../hooks/consultor/useUpdateConsultant";
 
 // AYUDAS A USAR
 import {

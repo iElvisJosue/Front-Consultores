@@ -5,7 +5,7 @@ import PerfilDelConsultorInformacion from "./PerfilDelConsultorInformacion";
 import Loader from "../global/Loader";
 
 // HOOKS A USAR
-import useProfileConsultant from "../../../hooks/useProfileConsultant";
+import useProfileConsultant from "../../../hooks/consultor/useProfileConsultant";
 
 export default function PerfilDelConsultor() {
   const { consultantInformation, cvIsDone, setCheckCV, checkCV } =

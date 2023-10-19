@@ -11,7 +11,7 @@ import BackSection from "../global/BackSection";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataBank from "../../../hooks/useDataBank";
+import useDataBank from "../../../hooks/consultor/useDataBank";
 
 // AYUDAS A USAR
 import { inputsAddBankProps } from "../../../helpers/PerfilDelConsultorInformacionBancoAgregar";

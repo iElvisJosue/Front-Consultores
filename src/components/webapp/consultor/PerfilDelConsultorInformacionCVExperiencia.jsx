@@ -30,7 +30,9 @@ export default function PerfilDelConsultorInformacionCVExperiencia({
           />
         ))
       ) : (
-        <SinInformacion />
+        <SinInformacion>
+          ¡No cuentas con experiencia profesional!
+        </SinInformacion>
       )}
       <ButtonSubmit
         changeMenu={changeMenu}

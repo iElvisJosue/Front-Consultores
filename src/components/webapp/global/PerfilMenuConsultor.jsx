@@ -6,6 +6,9 @@ import { menuOptions } from "../../../helpers/PerfilMenuConsultor";
 // HOOKS A USAR
 import useLogout from "../../../hooks/useLogout";
 
+// ESTILOS A USAR
+import "../../../styles/webapp/MenuConsultor.css";
+
 export default function PerfilMenuConsultor({
   setElementID,
   changeMenu,
@@ -14,11 +17,11 @@ export default function PerfilMenuConsultor({
   const { closingSession } = useLogout();
 
   return (
-    <ul className="Main__Profile__Information--Menu--Options">
+    <ul className="Main__Profile__Information--MenuConsultant--Options">
       {menuOptions.map((option) => (
         <li
           key={option.label}
-          className={`Main__Profile__Information--Menu--Options--Item ${
+          className={`Main__Profile__Information--MenuConsultant--Options--Item ${
             menu === option.label ? "Active" : ""
           }`}
           onClick={() => {
@@ -29,7 +32,7 @@ export default function PerfilMenuConsultor({
         </li>
       ))}
       <li
-        className="Main__Profile__Information--Menu--Options--Item"
+        className="Main__Profile__Information--MenuConsultant--Options--Item"
         onClick={closingSession}
       >
         <ion-icon name="log-out-outline"></ion-icon> Cerrar Sesión

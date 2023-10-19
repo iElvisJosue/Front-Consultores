@@ -14,7 +14,7 @@ import {
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataLanguage from "../../../hooks/useDataLanguage";
+import useDataLanguage from "../../../hooks/consultor/useDataLanguage";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVAgregarIdioma.css";

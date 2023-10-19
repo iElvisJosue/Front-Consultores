@@ -14,7 +14,7 @@ import { listOfMonths, listOfYears } from "../../../helpers/Selectores";
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataEducation from "../../../hooks/useDataEducation";
+import useDataEducation from "../../../hooks/consultor/useDataEducation";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVAdministrarEducacion.css";
@@ -47,21 +47,18 @@ export default function PerfilDelConsultorInformacionCVAdministrarEducacion({
   useEffect(() => {
     if (elementID) {
       const { consultantEducation } = consultantInformation.data;
-      consultantEducation.map(
-        ({ _id, institution, area, educationLevel, startDate, endDate }) => {
-          if (_id === elementID) {
-            const formatStartDate = startDate.split(" ");
-            const formatEndDate = endDate.split(" ");
-            setValue("institution", institution);
-            setValue("area", area);
-            setValue("educationLevel", educationLevel);
-            setValue("studiesMonthStart", formatStartDate[0]);
-            setValue("studiesYearStart", formatStartDate[1]);
-            setValue("studiesMonthEnd", formatEndDate[0]);
-            setValue("studiesYearEnd", formatEndDate[1]);
-          }
-        }
+      const informationEducation = consultantEducation.find(
+        ({ _id }) => _id === elementID
       );
+      const formatStartDate = informationEducation.startDate.split(" ");
+      const formatEndDate = informationEducation.endDate.split(" ");
+      setValue("institution", informationEducation.institution);
+      setValue("area", informationEducation.area);
+      setValue("educationLevel", informationEducation.educationLevel);
+      setValue("studiesMonthStart", formatStartDate[0]);
+      setValue("studiesYearStart", formatStartDate[1]);
+      setValue("studiesMonthEnd", formatEndDate[0]);
+      setValue("studiesYearEnd", formatEndDate[1]);
     }
   }, []);
 

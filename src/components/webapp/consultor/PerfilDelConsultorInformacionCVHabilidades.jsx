@@ -31,7 +31,7 @@ export default function PerfilDelConsultorInformacionCVHabilidades({
           </TituloDeLaSeccion>
         ))
       ) : (
-        <SinInformacion />
+        <SinInformacion>¡No cuentas con habilidades personales!</SinInformacion>
       )}
       <ButtonSubmit
         addElement={true}

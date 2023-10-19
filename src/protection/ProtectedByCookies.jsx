@@ -6,9 +6,7 @@ export default function ProtectedByCookies() {
   const { loading, hasCookie } = useGlobal();
 
   if (loading) return <Loader />;
-  if (!loading && !hasCookie) {
-    return <Navigate to="/IniciarSesion" replace />;
-  }
+  if (!loading && !hasCookie) return <Navigate to="/IniciarSesion" replace />;
 
   return <Outlet />;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 // LIBRERÍAS A USAR
 import { useEffect } from "react";
@@ -13,7 +14,7 @@ import { resumeInformationData } from "../../../helpers/PerfilDelConsultorAgrega
 
 // HOOKS A USAR
 import useDisabled from "../../../hooks/useDisabled";
-import useDataResume from "../../../hooks/useDataResume";
+import useDataResume from "../../../hooks/consultor/useDataResume";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionCVEditarResume.css";

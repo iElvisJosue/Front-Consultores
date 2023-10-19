@@ -1,8 +1,8 @@
 // AYUDAS A USAR
-import { handleResponseMessages } from "../helpers/Respuestas";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 // CONTEXTOS A USAR
-import { useConsultant } from "../context/ConsultantContext";
+import { useConsultant } from "../../context/ConsultantContext";
 
 export default function useDataEducation({
   changeMenu,

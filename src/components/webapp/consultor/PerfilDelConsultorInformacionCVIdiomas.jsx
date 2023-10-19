@@ -33,7 +33,7 @@ export default function PerfilDelConsultorInformacionCVIdiomas({
           )
         )
       ) : (
-        <SinInformacion />
+        <SinInformacion>¡No cuentas con idiomas!</SinInformacion>
       )}
       <ButtonSubmit
         addElement={true}

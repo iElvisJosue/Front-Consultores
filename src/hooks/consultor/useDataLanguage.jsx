@@ -1,21 +1,21 @@
 // AYUDAS A USAR
-import { handleResponseMessages } from "../helpers/Respuestas";
+import { handleResponseMessages } from "../../helpers/Respuestas";
 
 // CONTEXTOS A USAR
-import { useConsultant } from "../context/ConsultantContext";
+import { useConsultant } from "../../context/ConsultantContext";
 
-export default function useDataAbility({
+export default function useDataLanguage({
   setCheckCV,
   checkCV,
   submitDisabled,
   changeMenu,
   setElementID,
 }) {
-  const { addSkill } = useConsultant();
-  const addAbilityConsultant = async (data) => {
+  const { addLanguage } = useConsultant();
+  const addLanguageConsultant = async (data) => {
     submitDisabled();
     try {
-      const res = await addSkill(data);
+      const res = await addLanguage(data);
       if (res.response) {
         const { status, data } = res.response;
         handleResponseMessages({ status, data });
@@ -33,14 +33,14 @@ export default function useDataAbility({
   };
 
   const backSectionHeaderProps = {
-    imgUrl: "./HabilidadPersonal.png",
-    imgAlt: "Habilidad Personal",
-    title: "Agregar Habilidad 🎲",
+    imgUrl: "./IdiomasPersonales.png",
+    imgAlt: "Idiomas Personales",
+    title: "Agregar Idioma 🌍",
     changeMenu,
   };
 
   return {
-    addAbilityConsultant,
+    addLanguageConsultant,
     backSectionHeaderProps,
   };
 }

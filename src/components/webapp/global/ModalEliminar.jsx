@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // HOOKS A USAR
-import useDataDelete from "../../../hooks/useDataDelete";
+import useDataDelete from "../../../hooks/consultor/useDataDelete";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/ModalEliminar.css";
@@ -43,9 +43,7 @@ export default function ModalEliminar({
 
   const deleteElement = () => {
     optionsDelete[typeElementDelete]();
-    setShowModalDelete(false);
-    setTypeElementDelete(null);
-    setElementID(null);
+    closeModalDelete();
   };
 
   return (
