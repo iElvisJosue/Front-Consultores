@@ -23,7 +23,7 @@ export default function PerfilDelClienteInformacionProyectos({
 
   return (
     <div className="Main__Profile__Information--Content--ClientProjects">
-      <TituloDeLaSeccion>Mis Proyectos 👨‍💻</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>Mis Proyectos 👨‍💻</TituloDeLaSeccion>
       <PerfilDelClienteFiltrarProyectos setFilter={setFilter} filter={filter} />
       {projectsFiltered.length > 0 ? (
         projectsFiltered.map((project, index) => (

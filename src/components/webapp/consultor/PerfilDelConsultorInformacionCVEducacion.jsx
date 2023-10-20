@@ -15,7 +15,9 @@ export default function PerfilDelConsultorInformacionCVEducacion({
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVEducation">
-      <TituloDeLaSeccion>Educación Profesional 📚</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Educación Profesional 📚
+      </TituloDeLaSeccion>
       {consultantEducation.length > 0 ? (
         consultantEducation.map((education, index) => (
           <DetallesDeLaEducacion

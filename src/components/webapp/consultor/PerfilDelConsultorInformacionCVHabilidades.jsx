@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // COMPONENTES A USAR
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import ButtonSubmit from "../global/ButtonSubmit";
 import SinInformacion from "../global/SinInformacion";
 
@@ -14,21 +15,23 @@ export default function PerfilDelConsultorInformacionCVHabilidades({
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVAbilities">
-      <TituloDeLaSeccion>Habilidades Personales 🎲</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Habilidades Personales 🎲
+      </TituloDeLaSeccion>
       {consultantSkills.length > 0 ? (
         consultantSkills.map(({ _id, nameSkill }, index) => (
-          <TituloDeLaSeccion
+          <SubtituloDeLaSeccion
             id={_id}
             key={index}
             setElementID={setElementID}
             setShowModalDelete={setShowModalDelete}
             setTypeElementDelete={setTypeElementDelete}
             nameMenu={nameMenu}
-            title={false}
-            deleted={true}
+            completed={false}
+            editable={false}
           >
             {nameSkill}
-          </TituloDeLaSeccion>
+          </SubtituloDeLaSeccion>
         ))
       ) : (
         <SinInformacion>¡No cuentas con habilidades personales!</SinInformacion>

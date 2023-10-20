@@ -61,7 +61,9 @@ export default function PerfilDelClienteInformacionPerfilNegocio({
         }
       }}
     >
-      <TituloDeLaSeccion>Información De Negocio 🏢</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Información De Negocio 🏢
+      </TituloDeLaSeccion>
       {inputsEditDataBusiness.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--ProfileUser--Business--GroupInputs"

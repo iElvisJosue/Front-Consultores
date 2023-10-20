@@ -79,7 +79,9 @@ export default function PerfilDelConsultorInformacionBancoAgregar({
       }}
     >
       {consultantBank ? (
-        <TituloDeLaSeccion>Tu Información Bancaria 💳</TituloDeLaSeccion>
+        <TituloDeLaSeccion editable={false}>
+          Tu Información Bancaria 💳
+        </TituloDeLaSeccion>
       ) : (
         <BackSection {...bankHeaderProps} />
       )}

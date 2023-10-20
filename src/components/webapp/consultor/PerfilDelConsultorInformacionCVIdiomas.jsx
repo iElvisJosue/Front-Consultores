@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // COMPONENTES A USAR
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import ButtonSubmit from "../global/ButtonSubmit";
 import SinInformacion from "../global/SinInformacion";
 
@@ -14,22 +15,22 @@ export default function PerfilDelConsultorInformacionCVIdiomas({
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVLanguages">
-      <TituloDeLaSeccion>Idiomas 🌍</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>Idiomas 🌍</TituloDeLaSeccion>
       {consultantLanguages.length > 0 ? (
         consultantLanguages.map(
           ({ _id, nameLanguage, levelLanguage }, index) => (
-            <TituloDeLaSeccion
+            <SubtituloDeLaSeccion
               id={_id}
               key={index}
               setElementID={setElementID}
               setShowModalDelete={setShowModalDelete}
               setTypeElementDelete={setTypeElementDelete}
               nameMenu={nameMenu}
-              title={false}
-              deleted={true}
+              completed={false}
+              editable={false}
             >
               {nameLanguage} - {levelLanguage}
-            </TituloDeLaSeccion>
+            </SubtituloDeLaSeccion>
           )
         )
       ) : (

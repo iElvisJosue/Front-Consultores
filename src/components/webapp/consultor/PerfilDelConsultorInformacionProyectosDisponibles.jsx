@@ -15,7 +15,7 @@ export default function PerfilDelConsultorInformacionProyectosDisponibles({
 }) {
   return (
     <div className="Main__Profile__Information--Content--ProjectsAvailable">
-      <TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
         Proyectos Disponibles: {amountProjects} ✨
       </TituloDeLaSeccion>
       {projectsAvailable.map(

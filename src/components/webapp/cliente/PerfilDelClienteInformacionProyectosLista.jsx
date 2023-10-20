@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // COMPONENTES A USAR
-import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import TextoDeLaSeccion from "../global/TextoDeLaSeccion";
 
 // AYUDAS
@@ -35,19 +35,18 @@ export default function PerfilDelClienteInformacionProyectosLista({
   return (
     <>
       {filter === "Activos" ? (
-        <TituloDeLaSeccion
-          completed={true}
-          editable={true}
-          deleted={true}
-          id={_id}
+        <SubtituloDeLaSeccion id={_id} {...commonPropsProjectsList}>
+          Proyecto {index} 🗃️
+        </SubtituloDeLaSeccion>
+      ) : (
+        <SubtituloDeLaSeccion
+          completed={false}
+          editable={false}
+          deleted={false}
           {...commonPropsProjectsList}
         >
           Proyecto {index} 🗃️
-        </TituloDeLaSeccion>
-      ) : (
-        <TituloDeLaSeccion {...commonPropsProjectsList}>
-          Proyecto {index} 🗃️
-        </TituloDeLaSeccion>
+        </SubtituloDeLaSeccion>
       )}
 
       <TextoDeLaSeccion title="💼 Nombre:" text={nameProject} />

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // COMPONENTES A USAR
-import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import TextoDeLaSeccion from "../global/TextoDeLaSeccion";
 
 export default function DetallesDeLaEducacion({
@@ -16,19 +16,17 @@ export default function DetallesDeLaEducacion({
     education;
   return (
     <>
-      <TituloDeLaSeccion
+      <SubtituloDeLaSeccion
         changeMenu={changeMenu}
         nameMenu={nameMenu}
         setElementID={setElementID}
         setShowModalDelete={setShowModalDelete}
         setTypeElementDelete={setTypeElementDelete}
-        title={false}
-        editable={true}
-        deleted={true}
         id={_id}
+        completed={false}
       >
         Educación {numberEducation} 👨‍🎓
-      </TituloDeLaSeccion>
+      </SubtituloDeLaSeccion>
       <TextoDeLaSeccion title="🏫 Institución:" text={institution} />
       <TextoDeLaSeccion title="👨‍💻 Área:" text={area} />
       <TextoDeLaSeccion title="↗️ Nivel de educación:" text={educationLevel} />

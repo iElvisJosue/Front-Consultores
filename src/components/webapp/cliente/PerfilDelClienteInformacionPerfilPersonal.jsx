@@ -66,7 +66,9 @@ export default function PerfilDelClienteInformacionPerfilPersonal({
       <small className="Main__Profile__Information--Content--ProfileUser--Edit--LastUpdate">
         <strong>Última actualización</strong> {lastUpdate}
       </small>
-      <TituloDeLaSeccion>Información Personal 📃</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Información Personal 📃
+      </TituloDeLaSeccion>
       {inputsEditDataProfile.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--ProfileUser--Edit--GroupInputs"

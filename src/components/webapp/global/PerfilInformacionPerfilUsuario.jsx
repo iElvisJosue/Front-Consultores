@@ -24,7 +24,9 @@ export default function PerfilInformacionPerfilUsuario() {
   }, []);
   return (
     <div className="Main__Profile__Information--Content--ProfileUser">
-      <TituloDeLaSeccion>Información De Usuario 👤</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Información De Usuario 👤
+      </TituloDeLaSeccion>
       {inputsShowDataUserProfile.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--ProfileUser--GroupInputs"

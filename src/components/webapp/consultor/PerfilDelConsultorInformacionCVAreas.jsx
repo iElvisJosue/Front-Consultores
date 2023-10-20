@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // COMPONENTES A USAR
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
+import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import ButtonSubmit from "../global/ButtonSubmit";
 import SinInformacion from "../global/SinInformacion";
 
@@ -14,10 +15,12 @@ export default function PerfilDelConsultorInformacionCVAreas({
 }) {
   return (
     <div className="Main__Profile__Information--Content--CVAreas">
-      <TituloDeLaSeccion>Areas de especialidad 🛠️</TituloDeLaSeccion>
+      <TituloDeLaSeccion editable={false}>
+        Areas de especialidad 🛠️
+      </TituloDeLaSeccion>
       {consultantAreas.length > 0 ? (
         consultantAreas.map(({ _id, nameArea }, index) => (
-          <TituloDeLaSeccion
+          <SubtituloDeLaSeccion
             id={_id}
             key={index}
             setElementID={setElementID}
@@ -25,10 +28,11 @@ export default function PerfilDelConsultorInformacionCVAreas({
             setTypeElementDelete={setTypeElementDelete}
             nameMenu={nameMenu}
             title={false}
-            deleted={true}
+            completed={false}
+            editable={false}
           >
             {nameArea}
-          </TituloDeLaSeccion>
+          </SubtituloDeLaSeccion>
         ))
       ) : (
         <SinInformacion>¡No cuentas con areas de especialidad!</SinInformacion>
