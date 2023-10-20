@@ -14,7 +14,7 @@ export default function PerfilDelClienteFiltrarProyectos({
         }`}
         onClick={() => setFilter("Activos")}
       >
-        ACTIVOS
+        Activos
       </button>
       <button
         className={`Main__Profile__Information--Content--ClientProjects--Filter--Button ${
@@ -22,7 +22,7 @@ export default function PerfilDelClienteFiltrarProyectos({
         }`}
         onClick={() => setFilter("Completados")}
       >
-        COMPLETADOS
+        Completados
       </button>
     </span>
   );

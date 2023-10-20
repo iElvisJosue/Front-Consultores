@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // ESTILOS A USAR
-import "../../../styles/webapp/TituloDeLaSeccion.css";
+import "../../../styles/webapp/SubtituloDeLaSeccion.css";
 export default function SubtituloDeLaSeccion({
   id = "",
   changeMenu,
@@ -29,12 +29,12 @@ export default function SubtituloDeLaSeccion({
   };
 
   return (
-    <p className="Main__Profile__Information--TitleSection SemiTitle">
+    <p className="Main__Profile__Information--Subtitle SemiTitle">
       {children}
-      <span className="Main__Profile__Information--TitleSection--Container">
+      <span className="Main__Profile__Information--Subtitle--Container">
         {completed && (
           <button
-            className="Main__Profile__Information--TitleSection--Container--Button"
+            className="Main__Profile__Information--Subtitle--Container--Button Complete"
             onClick={completeElement}
           >
             <ion-icon name="checkmark-circle-outline"></ion-icon>
@@ -42,7 +42,7 @@ export default function SubtituloDeLaSeccion({
         )}
         {editable && (
           <button
-            className="Main__Profile__Information--TitleSection--Container--Button"
+            className="Main__Profile__Information--Subtitle--Container--Button"
             onClick={editElement}
           >
             <ion-icon name="color-wand-outline"></ion-icon>
@@ -50,7 +50,7 @@ export default function SubtituloDeLaSeccion({
         )}
         {deleted && (
           <button
-            className="Main__Profile__Information--TitleSection--Container--Button"
+            className="Main__Profile__Information--Subtitle--Container--Button Delete"
             onClick={deleteElement}
           >
             <ion-icon name="trash-outline"></ion-icon>
