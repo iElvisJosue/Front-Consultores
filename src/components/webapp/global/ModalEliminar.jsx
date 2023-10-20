@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // HOOKS A USAR
 import useDataDelete from "../../../hooks/consultor/useDataDelete";
+import useProjectDelete from "../../../hooks/cliente/useProjectDelete";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/ModalEliminar.css";
@@ -13,6 +14,8 @@ export default function ModalEliminar({
   setTypeElementDelete,
   setCheckCV,
   checkCV,
+  setCheckClient,
+  checkClient,
 }) {
   const {
     deleteExperience,
@@ -26,6 +29,11 @@ export default function ModalEliminar({
     setCheckCV,
     checkCV,
   });
+  const { deleteProject, handleProject } = useProjectDelete({
+    setElementID,
+    setCheckClient,
+    checkClient,
+  });
 
   const optionsDelete = {
     CVAdministrarExperiencia: () => handleDelete(elementID, deleteExperience),
@@ -33,17 +41,18 @@ export default function ModalEliminar({
     CVAdministrarArea: () => handleDelete(elementID, deleteArea),
     CVAdministrarHabilidad: () => handleDelete(elementID, deleteSkill),
     CVAdministrarIdioma: () => handleDelete(elementID, deleteLanguage),
+    ProyectosAdministrar: () => handleProject(elementID, deleteProject),
+  };
+
+  const deleteElement = () => {
+    optionsDelete[typeElementDelete]();
+    closeModalDelete();
   };
 
   const closeModalDelete = () => {
     setShowModalDelete(false);
     setTypeElementDelete(null);
     setElementID(null);
-  };
-
-  const deleteElement = () => {
-    optionsDelete[typeElementDelete]();
-    closeModalDelete();
   };
 
   return (

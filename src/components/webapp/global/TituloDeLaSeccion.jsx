@@ -22,7 +22,6 @@ export default function TituloDeLaSeccion({
 
   const completeElement = () => {
     setElementID(id);
-    changeMenu(nameMenu);
   };
   const deleteElement = () => {
     setElementID(id);
