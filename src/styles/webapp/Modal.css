@@ -1,4 +1,4 @@
-.Main__ModalDelete {
+.Main__Modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,11 +13,11 @@
   align-items: center;
   justify-content: center;
 }
-.Main__ModalDelete.Show {
+.Main__Modal.Show {
   z-index: 1000;
   opacity: 1;
 }
-.Main__ModalDelete--Content {
+.Main__Modal--Content {
   width: 350px;
   min-height: 250px;
   border-radius: 10px;
@@ -29,33 +29,36 @@
   align-items: center;
   gap: 20px;
 }
-.Main__ModalDelete--Content--Title {
+.Main__Modal--Content--Title {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
   color: var(--Red);
 }
-.Main__ModalDelete--Content--Picture {
+.Main__Modal--Content--Title.Complete {
+  color: var(--Green);
+}
+.Main__Modal--Content--Picture {
   width: 100px;
   height: 100px;
 }
-.Main__ModalDelete--Content--Picture img {
+.Main__Modal--Content--Picture img {
   width: 100%;
   height: 100%;
 }
-.Main__ModalDelete--Content--Description {
+.Main__Modal--Content--Description {
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
   color: var(--Black);
 }
-.Main__ModalDelete--Content--Buttons {
+.Main__Modal--Content--Buttons {
   display: flex;
   gap: 10px;
   width: 100%;
 }
-.Main__ModalDelete--Content--Buttons--Cancel,
-.Main__ModalDelete--Content--Buttons--Confirm {
+.Main__Modal--Content--Buttons--Cancel,
+.Main__Modal--Content--Buttons--Confirm {
   width: 50%;
   height: 40px;
   font-weight: bold;
@@ -65,21 +68,41 @@
 
   cursor: pointer;
 }
-.Main__ModalDelete--Content--Buttons--Cancel {
+.Main__Modal--Content--Buttons--Cancel {
   background-color: var(--Red);
   border: 2px solid var(--Red);
   color: var(--White);
 }
-.Main__ModalDelete--Content--Buttons--Confirm {
+.Main__Modal--Content--Buttons--Cancel.Complete {
   background-color: var(--Gray);
   border: 2px solid var(--Gray);
   color: var(--Black);
 }
-.Main__ModalDelete--Content--Buttons--Cancel:hover {
+.Main__Modal--Content--Buttons--Confirm {
+  background-color: var(--Gray);
+  border: 2px solid var(--Gray);
+  color: var(--Black);
+}
+.Main__Modal--Content--Buttons--Confirm.Complete {
+  background-color: var(--Green);
+  border: 2px solid var(--Green);
+  color: var(--White);
+}
+.Main__Modal--Content--Buttons--Cancel:hover {
   background-color: transparent;
   color: var(--Red);
 }
-.Main__ModalDelete--Content--Buttons--Confirm:hover {
+.Main__Modal--Content--Buttons--Cancel.Complete:hover {
   background-color: transparent;
   border: 2px solid var(--Black);
+  color: var(--Black);
+}
+.Main__Modal--Content--Buttons--Confirm:hover {
+  background-color: transparent;
+  border: 2px solid var(--Black);
+}
+.Main__Modal--Content--Buttons--Confirm.Complete:hover {
+  background-color: transparent;
+  border: 2px solid var(--Green);
+  color: var(--Green);
 }

@@ -16,6 +16,10 @@ export const updateDataBusinessClientRequest = (data) =>
 export const addNewProjectRequest = (data) =>
   axios.post("/client/addNewProject", data);
 
+// PETICIÓN PARA EDITAR UN PROYECTO
+export const updateProjectRequest = (data) =>
+  axios.put("/client/updateProject", data);
+
 // PETICIÓN PARA OBTENER LOS DATOS DEL CLIENTE
 export const getInformationClientRequest = () =>
   axios.get("/client/getInformationClient");

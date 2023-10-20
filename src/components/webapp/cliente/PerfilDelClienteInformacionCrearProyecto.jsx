@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-// LIBRERÍAS A USAR
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
 import { ErrorMessage } from "@hookform/error-message";
 
 // COMPONENTES A USAR
@@ -9,63 +7,35 @@ import BackSection from "../global/BackSection";
 import ButtonSubmit from "../global/ButtonSubmit";
 
 // HOOKS A USAR
-import useUpdateProject from "../../../hooks/cliente/useUpdateProject";
+import useCreateProject from "../../../hooks/cliente/useCreateProject";
 
 // AYUDAS A USAR
 import { listOfSpecialtiesAreas } from "../../../helpers/Selectores";
 import { inputsCreateProject } from "../../../helpers/PerfilDelClienteInformacionCrearProyecto";
 
 // ESTILOS A USAR
-// SON LOS MISMOS QUE EL DE CREAR PROYECTO
 import "../../../styles/webapp/PerfilDelClienteInformacionCrearProyecto.css";
 
-export default function PerfilDelClienteInformacionProyectosEditar({
-  clientInformation,
-  setElementID,
-  elementID,
+export default function PerfilDelClienteInformacionCrearProyecto({
   changeMenu,
   setCheckClient,
   checkClient,
 }) {
-  const { editClientProject } = useUpdateProject({
+  const { addNewProject } = useCreateProject({
     changeMenu,
     setCheckClient,
     checkClient,
-    elementID,
   });
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm({ criteriaMode: "all" });
-
-  useEffect(() => {
-    const { projectsClient } = clientInformation.data;
-    projectsClient.find(
-      ({
-        _id,
-        nameProject,
-        paymentProject,
-        areaProject,
-        timeProject,
-        detailsProject,
-      }) => {
-        if (_id === elementID) {
-          setValue("nameProject", nameProject);
-          setValue("paymentProject", paymentProject);
-          setValue("areaProject", areaProject);
-          setValue("timeProject", timeProject);
-          setValue("detailsProject", detailsProject);
-        }
-      }
-    );
-  }, []);
 
   return (
     <form
       className="Main__Profile__Information--Content--CreateProject"
-      onSubmit={handleSubmit(editClientProject)}
+      onSubmit={handleSubmit(addNewProject)}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
           e.preventDefault();
@@ -73,15 +43,11 @@ export default function PerfilDelClienteInformacionProyectosEditar({
       }}
     >
       <BackSection
-        changeMenu={changeMenu}
-        setElementID={setElementID}
-        nameMenu="Proyectos"
+        backButton={false}
         imgUrl="./CrearProyecto.png"
-        imgAlt="Editar Un Proyecto Logo"
-        title="Editar Proyecto ✍️"
-      >
-        Regresar
-      </BackSection>
+        imgAlt="Crear Un Proyecto Logo"
+        title="Crea Un Proyecto 🗃️"
+      />
       {inputsCreateProject.map((inputDetails, index) => (
         <div
           className="Main__Profile__Information--Content--CreateProject--GroupInputs"
@@ -142,7 +108,7 @@ export default function PerfilDelClienteInformacionProyectosEditar({
           ))}
         </div>
       ))}
-      <ButtonSubmit text="Actualizar Proyecto" />
+      <ButtonSubmit text="Crear Proyecto" />
     </form>
   );
 }

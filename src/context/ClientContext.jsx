@@ -5,6 +5,7 @@ import {
   updateDataClientRequest,
   getInformationClientRequest,
   getConsultantsAvailableForProjectRequest,
+  updateProjectRequest,
   deleteProjectRequest,
   completedProjectRequest,
   updateDataBusinessClientRequest,
@@ -77,6 +78,18 @@ export const ClientProvider = ({ children }) => {
     }
   };
 
+  const updateProject = async (data) => {
+    try {
+      const res = await updateProjectRequest(data);
+      if (!res.data) {
+        return console.log("HUBO UN ERROR AL EDITAR EL PROYECTO");
+      }
+      return res;
+    } catch (error) {
+      return error;
+    }
+  };
+
   const deleteProject = async (id) => {
     try {
       const res = await deleteProjectRequest(id);
@@ -138,6 +151,7 @@ export const ClientProvider = ({ children }) => {
         updateProfileClient,
         getConsultantsAvailableForProject,
         addProject,
+        updateProject,
         deleteProject,
         completedProject,
         updateDataBusinessClient,

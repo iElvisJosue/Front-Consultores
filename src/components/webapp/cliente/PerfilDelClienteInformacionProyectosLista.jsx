@@ -5,7 +5,8 @@ import SubtituloDeLaSeccion from "../global/SubtituloDeLaSeccion";
 import TextoDeLaSeccion from "../global/TextoDeLaSeccion";
 
 // AYUDAS
-import { formatPayment } from "../../../helpers/PerfilDelConsultorInformacionProyectos";
+import { formatPayment } from "../../../helpers/FormatoDePago";
+import { dateCreate, dateLastUpdate } from "../../../helpers/FormatoDeFecha";
 
 export default function PerfilDelClienteInformacionProyectosLista({
   index,
@@ -13,6 +14,7 @@ export default function PerfilDelClienteInformacionProyectosLista({
   changeMenu,
   setElementID,
   setShowModalDelete,
+  setShowModalComplete,
   setTypeElementDelete,
   filter,
 }) {
@@ -23,14 +25,17 @@ export default function PerfilDelClienteInformacionProyectosLista({
     areaProject,
     timeProject,
     paymentProject,
+    createdAt,
+    updatedAt,
   } = project;
   const commonPropsProjectsList = {
     changeMenu,
     setShowModalDelete,
+    setShowModalComplete,
     setTypeElementDelete,
     setElementID,
     title: false,
-    nameMenu: "ProyectosAdministrar",
+    nameMenu: "ProyectosEditar",
   };
   return (
     <>
@@ -53,10 +58,15 @@ export default function PerfilDelClienteInformacionProyectosLista({
       <TextoDeLaSeccion title="📝 Detalles:" text={detailsProject} />
       <TextoDeLaSeccion title="🛠️ Área:" text={areaProject} />
       <TextoDeLaSeccion title="🕰️ Tiempo:" text={timeProject} />
-      <TextoDeLaSeccion
-        title="💰 Pago:"
-        text={`$${formatPayment(paymentProject)}`}
-      />
+      <TextoDeLaSeccion title="💰 Pago:" text={formatPayment(paymentProject)} />
+      {filter === "Activos" ? (
+        <TextoDeLaSeccion title="📅 Creado:" text={dateCreate(createdAt)} />
+      ) : (
+        <TextoDeLaSeccion
+          title="📅 Completado:"
+          text={dateLastUpdate(updatedAt)}
+        />
+      )}
       <hr
         style={{
           width: "100%",

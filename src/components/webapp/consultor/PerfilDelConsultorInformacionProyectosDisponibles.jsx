@@ -3,7 +3,7 @@
 import TituloDeLaSeccion from "../global/TituloDeLaSeccion";
 
 // AYUDAS A USAR
-import { formatPayment } from "../../../helpers/PerfilDelConsultorInformacionProyectos";
+import { formatPayment } from "../../../helpers/FormatoDePago";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionProyectosDisponibles.css";
@@ -45,7 +45,7 @@ export default function PerfilDelConsultorInformacionProyectosDisponibles({
                   <strong>🕰️ Tiempo:</strong> {timeProject}
                 </p>
                 <p className="Main__Profile__Information--Content--ProjectsAvailable--Container--Details--Payment">
-                  <strong>💰 Pago:</strong> ${formatPayment(paymentProject)}
+                  <strong>💰 Pago:</strong> {formatPayment(paymentProject)}
                 </p>
               </div>
             </div>

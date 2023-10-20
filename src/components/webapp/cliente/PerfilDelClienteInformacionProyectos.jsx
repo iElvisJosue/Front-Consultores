@@ -16,6 +16,7 @@ export default function PerfilDelClienteInformacionProyectos({
   changeMenu,
   setElementID,
   setShowModalDelete,
+  setShowModalComplete,
   setTypeElementDelete,
 }) {
   const { projectsClient } = clientInformation.data;
@@ -34,6 +35,7 @@ export default function PerfilDelClienteInformacionProyectos({
             changeMenu={changeMenu}
             setElementID={setElementID}
             setShowModalDelete={setShowModalDelete}
+            setShowModalComplete={setShowModalComplete}
             setTypeElementDelete={setTypeElementDelete}
             filter={filter}
           />

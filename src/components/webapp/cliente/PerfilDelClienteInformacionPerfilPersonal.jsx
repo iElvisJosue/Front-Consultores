@@ -14,10 +14,8 @@ import useDisabled from "../../../hooks/useDisabled";
 import useUpdateClient from "../../../hooks/cliente/useUpdateClient";
 
 // AYUDAS A USAR
-import {
-  inputsEditDataProfile,
-  dateLastUpdate,
-} from "../../../helpers/PerfilnformacionPerfilEditar";
+import { inputsEditDataProfile } from "../../../helpers/PerfilnformacionPerfilEditar";
+import { dateLastUpdate } from "../../../helpers/FormatoDeFecha";
 
 // LOS ESTILOS DE ESTE COMPONENTE SON LOS MISMOS QUE EL DEL CONSULTOR
 

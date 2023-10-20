@@ -4,16 +4,16 @@ import { useClient } from "../../context/ClientContext";
 // AYUDAS A USAR
 import { handleResponseMessages } from "../../helpers/Respuestas";
 
-export default function useProjectDelete({
+export default function useProjectComplete({
   setElementID,
   setCheckClient,
   checkClient,
 }) {
-  const { deleteProject } = useClient();
+  const { completedProject } = useClient();
 
-  const deleteProjectClient = async (elementID) => {
+  const completeProject = async (elementID) => {
     try {
-      const res = await deleteProject({ idProject: elementID });
+      const res = await completedProject({ idProject: elementID });
       if (res.response) {
         const { status, data } = res.response;
         handleResponseMessages({ status, data });
@@ -30,6 +30,6 @@ export default function useProjectDelete({
   };
 
   return {
-    deleteProjectClient,
+    completeProject,
   };
 }

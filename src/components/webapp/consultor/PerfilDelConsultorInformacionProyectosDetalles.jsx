@@ -3,7 +3,7 @@
 import BackSection from "../global/BackSection";
 
 // AYUDAS A USAR
-import { formatPayment } from "../../../helpers/PerfilDelConsultorInformacionProyectos";
+import { formatPayment } from "../../../helpers/FormatoDePago";
 
 // ESTILOS A USAR
 import "../../../styles/webapp/PerfilDelConsultorInformacionProyectosDetalles.css";
@@ -61,7 +61,7 @@ export default function PerfilDelConsultorInformacionProyectosDetalles({
           {projectDetails.detailsProject}
         </p>
         <p className="Main__Profile__Information--Content--ProjectsDetails--Content--Text">
-          <strong>💰 Pago: </strong>$
+          <strong>💰 Pago: </strong>
           {formatPayment(projectDetails.paymentProject)}
           <strong
             style={{

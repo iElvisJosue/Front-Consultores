@@ -2,16 +2,19 @@
 
 // COMPONENTES A USAR
 import ModalEliminar from "../global/ModalEliminar";
+import ModalCompletar from "../global/ModalCompletar";
 import PerfilMenu from "../global/PerfilMenu";
 import PerfilDelClienteInformacionPerfil from "./PerfilDelClienteInformacionPerfil";
 import PerfilDelClienteInformacionProyectos from "./PerfilDelClienteInformacionProyectos";
 import PerfilDelClienteInformacionProyectosLista from "./PerfilDelClienteInformacionProyectosLista";
-import PerfilDelClienteInformacionProyectosAdministrar from "./PerfilDelClienteInformacionProyectosAdministrar";
+import PerfilDelClienteInformacionProyectosEditar from "./PerfilDelClienteInformacionProyectosEditar";
+import PerfilDelClienteInformacionCrearProyecto from "./PerfilDelClienteInformacionCrearProyecto";
 
 // HOOKS A USAR
 import useMenu from "../../../hooks/useMenu";
 import useID from "../../../hooks/useID";
 import useModalDelete from "../../../hooks/consultor/useModalDelete";
+import useModalComplete from "../../../hooks/cliente/useModalComplete";
 
 // ESTILOS A USAR (SON LOS MISMOS QUE EL DEL CONSULTOR)
 import "../../../styles/webapp/PerfilDelConsultorInformacion.css";
@@ -28,6 +31,7 @@ export default function PerfilDelClienteInformacion({
     typeElementDelete,
     setTypeElementDelete,
   } = useModalDelete();
+  const { classModalComplete, setShowModalComplete } = useModalComplete();
   const { elementID, setElementID } = useID();
 
   const clientProfileCommonProps = {
@@ -39,8 +43,18 @@ export default function PerfilDelClienteInformacion({
     setElementID,
     elementID,
     setShowModalDelete,
+    setShowModalComplete,
     typeElementDelete,
     setTypeElementDelete,
+  };
+
+  const modalCompleteProps = {
+    setShowModalComplete,
+    classModalComplete,
+    setElementID,
+    elementID,
+    setCheckClient,
+    checkClient,
   };
 
   const modalDeleteProps = {
@@ -57,8 +71,9 @@ export default function PerfilDelClienteInformacion({
   const profileOptionsToRender = {
     Perfil: PerfilDelClienteInformacionPerfil,
     Proyectos: PerfilDelClienteInformacionProyectos,
+    ProyectosEditar: PerfilDelClienteInformacionProyectosEditar,
     ProyectosLista: PerfilDelClienteInformacionProyectosLista,
-    ProyectosAdministrar: PerfilDelClienteInformacionProyectosAdministrar,
+    CrearProyecto: PerfilDelClienteInformacionCrearProyecto,
   };
 
   const ProfileSectionToRender = profileOptionsToRender[menu];
@@ -66,6 +81,7 @@ export default function PerfilDelClienteInformacion({
   return (
     <div className="Main__Profile__Information">
       <ModalEliminar {...modalDeleteProps} />
+      <ModalCompletar {...modalCompleteProps} />
       <PerfilMenu
         setElementID={setElementID}
         changeMenu={changeMenu}

@@ -8,11 +8,12 @@ export default function SubtituloDeLaSeccion({
   nameMenu,
   setElementID,
   setShowModalDelete,
+  setShowModalComplete,
   setTypeElementDelete,
-  children,
   completed = true,
   editable = true,
   deleted = true,
+  children,
 }) {
   const editElement = () => {
     setElementID(id);
@@ -21,6 +22,7 @@ export default function SubtituloDeLaSeccion({
 
   const completeElement = () => {
     setElementID(id);
+    setShowModalComplete(true);
   };
   const deleteElement = () => {
     setElementID(id);
@@ -29,7 +31,7 @@ export default function SubtituloDeLaSeccion({
   };
 
   return (
-    <p className="Main__Profile__Information--Subtitle SemiTitle">
+    <p className="Main__Profile__Information--Subtitle">
       {children}
       <span className="Main__Profile__Information--Subtitle--Container">
         {completed && (

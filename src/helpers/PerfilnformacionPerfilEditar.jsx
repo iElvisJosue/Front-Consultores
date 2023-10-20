@@ -1,20 +1,5 @@
 // HELPERS
 import { listOfServices, listOfSector, listOfChallenges } from "./Selectores";
-
-export const dateLastUpdate = (date) => {
-  const updatedAtDate = new Date(date);
-
-  const day = updatedAtDate.getDate();
-  const month = updatedAtDate.getMonth();
-  const year = updatedAtDate.getFullYear();
-  const hour = updatedAtDate.getHours();
-  const minutes = updatedAtDate.getMinutes();
-  const seconds = updatedAtDate.getSeconds();
-
-  const formatDate = `${day}/${month}/${year} a las ${hour}:${minutes}:${seconds}`;
-
-  return formatDate;
-};
 export const inputsShowDataUserProfile = [
   [
     {

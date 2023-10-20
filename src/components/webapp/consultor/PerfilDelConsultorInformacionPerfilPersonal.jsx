@@ -13,10 +13,8 @@ import useDisabled from "../../../hooks/useDisabled";
 import useUpdateConsultant from "../../../hooks/consultor/useUpdateConsultant";
 
 // AYUDAS A USAR
-import {
-  inputsEditDataProfile,
-  dateLastUpdate,
-} from "../../../helpers/PerfilnformacionPerfilEditar";
+import { inputsEditDataProfile } from "../../../helpers/PerfilnformacionPerfilEditar";
+import { dateLastUpdate } from "../../../helpers/FormatoDeFecha";
 
 import "../../../styles/webapp/PerfilDelConsultorInformacionPerfilPersonal.css";
 
