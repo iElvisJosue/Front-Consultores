@@ -9,6 +9,8 @@ import PerfilDelClienteInformacionProyectos from "./PerfilDelClienteInformacionP
 import PerfilDelClienteInformacionProyectosLista from "./PerfilDelClienteInformacionProyectosLista";
 import PerfilDelClienteInformacionProyectosEditar from "./PerfilDelClienteInformacionProyectosEditar";
 import PerfilDelClienteInformacionCrearProyecto from "./PerfilDelClienteInformacionCrearProyecto";
+import PerfilDelClienteInformacionConsultores from "./PerfilDelClienteInformacionConsultores";
+import PerfilDelClienteInformacionConfiguracion from "./PerfilDelClienteInformacionConfiguracion";
 
 // HOOKS A USAR
 import useMenu from "../../../hooks/useMenu";
@@ -74,6 +76,8 @@ export default function PerfilDelClienteInformacion({
     ProyectosEditar: PerfilDelClienteInformacionProyectosEditar,
     ProyectosLista: PerfilDelClienteInformacionProyectosLista,
     CrearProyecto: PerfilDelClienteInformacionCrearProyecto,
+    Consultores: PerfilDelClienteInformacionConsultores,
+    Configuración: PerfilDelClienteInformacionConfiguracion,
   };
 
   const ProfileSectionToRender = profileOptionsToRender[menu];

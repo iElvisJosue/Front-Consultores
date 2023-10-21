@@ -26,6 +26,17 @@
   border-color: var(--MainPurple);
   background-color: var(--SecondaryPurple);
 }
+.Main__Profile__Information--Content--ProjectsAvailable--Container--Project {
+  font-size: 1.4em;
+  padding: 10px 0;
+  color: var(--MainPurple);
+  text-align: center;
+  border-bottom: 2px solid var(--SecondaryPurple);
+}
+.Main__Profile__Information--Content--ProjectsAvailable--Container--Project i {
+  color: var(--Green);
+  font-weight: bold;
+}
 .Main__Profile__Information--Content--ProjectsAvailable--Container--Details {
   display: flex;
   gap: 10px;
@@ -57,6 +68,10 @@
 .Main__Profile__Information--Content--ProjectsAvailable--Container--Details--Payment {
   font-size: 1.4em;
   color: var(--MainPurple);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .Main__Profile__Information--Content--ProjectsAvailable--Container--Button {
   width: 100%;
